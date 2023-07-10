@@ -1,0 +1,54 @@
+body{
+    background-color: aqua;
+}
+.grid{
+    border: 0cap solid black;
+    width: 500px;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input{
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+     background-color: #cccccc;
+     border: 0px;
+     border-radius: 20px;
+}
+input:hover{
+    background-color: rgb(15, 5, 5);
+    border: 2px solid white ;
+    cursor: pointer;
+    color: white;
+}
+textarea{
+    border-radius: 10px;
+    padding: 10px;
+    border: 0px;
+}
+textarea:focus{
+    border: 0px;
+    background-color: rgb(8, 8, 8);
+    color: white;
+}
+
+.attribution {
+    font-size: 15px;
+    padding: 5px;
+    }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  img{
+    padding: 0px;
+    background-color: hsl(220, 15%, 55%);
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(18, 17, 17, 0.2);
+  }
