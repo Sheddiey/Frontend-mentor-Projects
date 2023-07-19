@@ -31,19 +31,23 @@
     }
 
     .grid-container2{
-        display: inline-grid;
+        display: grid;
         grid-template-columns: auto auto auto;
         background-color: rgb(32, 26, 20);
         padding: 10px;
         margin: 10px;
         gap: 10px 20px;
     }
-    .grid-item{
+    .grid-item, .grid-item1{
         background-color: aquamarine;
         border: 1px solid black;
         padding: 20px;
         font-size: 30px;
         text-align: center;
+    }
+    .grid-item1{
+        grid-row-start: 1;
+        grid-row-end: 3;
     }
 </style>
 <body>
@@ -56,7 +60,7 @@
     </div>
 
     <div class="grid-container2">
-        <div class="grid-item">1</div>
+        <div class="grid-item1">1</div>
         <div class="grid-item">2</div>
         <div class="grid-item">3</div>
         <div class="grid-item">4</div>
@@ -64,7 +68,6 @@
         <div class="grid-item">6</div>
         <div class="grid-item">7</div>
         <div class="grid-item">8</div>
-        <div class="grid-item">9</div>
     </div>
 </body>
 </html>
