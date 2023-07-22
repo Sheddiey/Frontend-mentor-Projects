@@ -5,17 +5,20 @@ body{
     font-size: 15px;
 }
 .container{
-    width: 800px;
+    width: 660px;
+    height: 360px;
     display: flex;
     height: 100vh;
     align-items: center;
     color: white;
  }
 .sedans{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     background-color: hsl(31, 77%, 52%);
     padding: 20px;
-    height: 400px;
-    width: 260px;
+    height: 360px;
+    width: 220px;
 }
 .sedans > button{
     color: hsl(31, 77%, 52%);;
@@ -23,8 +26,8 @@ body{
 .suvs{
     background-color: hsl(184, 100%, 22%);
     padding: 20px;
-    height: 400px;
-    width: 260px;
+    height: 360px;
+    width: 220px;
 }
 .suvs > button{
     color: hsl(184, 100%, 22%);;
@@ -32,8 +35,10 @@ body{
 .luxury{
     background-color: hsl(179, 100%, 13%);
     padding: 20px;
-    height: 400px;
-    width: 260px;
+    height: 360px;
+    width: 220px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .luxury > button{
     color: hsl(179, 100%, 13%);;
@@ -41,6 +46,7 @@ body{
 p, button{
     font-family: Lexend Deca;
     font-weight: 400;
+    font-size: 12px;
 }
 p{
     color: hsla(0, 0%, 100%, 0.75);
@@ -71,4 +77,17 @@ button:hover{
     color: hsl(0, 0%, 95%);
 }
 
-    
+@media (max-width: 375px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+    .sedans, .luxury, .suvs{
+        width: 270px;
+        height: 600px;
+        border-radius: 0;
+        
+    }
+}
