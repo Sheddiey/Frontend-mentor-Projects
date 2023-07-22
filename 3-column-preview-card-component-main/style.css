@@ -1,0 +1,74 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+.container{
+    width: 800px;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    color: white;
+ }
+.sedans{
+    background-color: hsl(31, 77%, 52%);
+    padding: 20px;
+    height: 400px;
+    width: 260px;
+}
+.sedans > button{
+    color: hsl(31, 77%, 52%);;
+}
+.suvs{
+    background-color: hsl(184, 100%, 22%);
+    padding: 20px;
+    height: 400px;
+    width: 260px;
+}
+.suvs > button{
+    color: hsl(184, 100%, 22%);;
+}
+.luxury{
+    background-color: hsl(179, 100%, 13%);
+    padding: 20px;
+    height: 400px;
+    width: 260px;
+}
+.luxury > button{
+    color: hsl(179, 100%, 13%);;
+}
+p, button{
+    font-family: Lexend Deca;
+    font-weight: 400;
+}
+p{
+    color: hsla(0, 0%, 100%, 0.75);
+}
+h2{
+    color: hsl(0, 0%, 95%);
+    font-family: Big Shoulders Display;
+    font-weight: 700;
+}
+img, p, h2 {
+    margin: 20px;
+}
+button{
+    padding: 10px;
+    align-items: center;
+    border: 0;
+    border-radius: 23px;
+    background-color: hsl(0, 0%, 95%);
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+button:hover{
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%);
+}
+
+    
