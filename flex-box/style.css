@@ -3,25 +3,8 @@
 .container{
     border: 5px solid #ffccfc;
     display: flex;
-    /* justify-content: flex-end; */
+    flex-direction: column;
+    height: 100%; 
+    justify-content: flex-end;
+    align-items: flex-start;
 } 
-
-/* .home{
-    margin-right: auto;
-} */
-
-/* .container > div{
-    flex: 1;
-    /* flex-grow, flex-shrink, flex-basis, flex-wrap 
-}
-
-.container > .search{
-    flex: 2;
-} */
-
-.home, .logout{
-    flex: 2;
-}
-.logout{
-    flex: 1;
-}

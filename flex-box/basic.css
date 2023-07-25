@@ -1,12 +1,17 @@
 body{
-    margin: 20px;
+    margin: 0px;
 }
 .container > div{
     padding: 10px;
     text-align: center;
     font-size: 2em;
 }
-
+html, body{
+    box-sizing: border-box;
+    height: 100%;
+    padding: 10px;
+    background-color: #ffeead;
+}
 .container > div:nth-child(1) {
     background-color: #999;
 }
