@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(226, 43%, 10%);
+    font-family: 'Rubik';
+    color: white;
+}
+.container{
+    height: 350px;
+    width: 800px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+}
+
+.container > div{
+    padding: 0px;
+    border-radius: 16px;
+}
+.profile{
+    grid-row: 1/ span 2;
+    background-color: hsl(235, 46%, 20%);
+}
+.profile-bc > img{
+    height: 70px;
+    width: 70px;
+    border-radius: 35px;
+    border: 2px solid white;
+}
+.profile > div{
+    background-color: hsl(246, 80%, 60%, 0.6);
+    padding: 15px;
+    border-radius: 17px;
+}
+.profile > p{
+    padding-left: 20px;
+    line-height: 1.9;
+}
+.daily, .month{
+    display: none;
+}
+p{
+    font-size: 14px;
+}
+.current{
+    margin: 0;
+    padding: 0;
+    font-size: 35px;
+}
+.work{
+    background-color: hsl(15, 100%, 70%);
+}
+.play{
+    background-color: hsl(195, 74%, 62%);
+}
+.study{
+    background-color: hsl(348, 100%, 68%);
+}
+.exercise{
+    background-color: hsl(145, 58%, 55%)
+}
+.social{
+    background-color: hsl(264, 64%, 52%);
+}
+.selfcare{
+    background-color: hsl(43, 84%, 65%);
+}
+.svg-img{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+img{
+    height: 50px;
+}
+
+.bc{
+    padding: 10px;
+    background-color:  hsl(235, 46%, 20%);
+    border-radius: 13px;
+}
