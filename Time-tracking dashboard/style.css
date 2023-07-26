@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,14 +10,14 @@ body{
     color: white;
 }
 .container{
-    height: 350px;
+    height: 400px;
     width: 800px;
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 20px;
 }
 
-.container > div{
+.container > div{  
     padding: 0px;
     border-radius: 16px;
 }
