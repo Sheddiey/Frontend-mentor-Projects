@@ -1,0 +1,28 @@
+body, html{
+    margin: 10px;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+}
+.container > div > img{
+    width: 450px;
+    height: 350px;
+    object-fit: cover;
+    padding: 5px;
+}
+@media all and (max-width: 450px) {
+    .container > div > img{
+        width: 250px;
+        height: 200px;
+        object-fit: cover;
+        padding: 5px;
+    }
+}
