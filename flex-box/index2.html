@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html, body{
+        margin: 10px;
+    }
+    .container{
+        padding: 0;
+    }
+    .container > li{
+        padding: 10px;
+        background-color: antiquewhite;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 2rem;
+        list-style-type: none;
+    }
+    .search-input{
+        border: 0;
+        width: 100%;
+        outline: 0;
+        background: transparent;
+        border-bottom: 1px solid black;
+        font-size: 2rem;
+    }
+    ::placeholder{
+        color: rgb(24, 5, 5);
+    }
+    .search-input:focus{
+        border-color: black;
+        box-shadow: 0 0 5px black;
+    }
+
+    .container{
+        border: 5px solid black;
+        display: flex;
+    }
+    .search{
+        flex: 1;
+    }
+
+    @media all and (max-width: 600px){
+        .container{
+            flex-wrap: wrap;
+        }
+        .container > li {
+            flex: 1 1 50%;
+        }
+        .search > input{
+            text-align: center;
+        }
+    }
+    @media all and (max-width: 400px) {
+        .container > li {
+            flex: 1 1 100%;
+        }
+        .search{
+            order: 1;
+        }
+    }
+</style>
+<body>
+     <nav>
+        <ul class="container">
+            <li>Home</li>
+            <li>Profile</li>
+            <li class="search">
+                <input type="text" class="search-input" placeholder="Search">
+            </li>
+            <li>Logout</li>
+        </ul>
+     </nav>
+</body>
+</html>
