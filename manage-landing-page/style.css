@@ -270,20 +270,27 @@ p[data-width="wide"] {
     width: min(var(--max-width), 100% - (var(--padding) * 2));
     margin-inline: auto;
 }
- 
-:where(.flow :not(:first-child)){
-    margin-top: var(--flow-spacer, 3em);
-}
 
 .even-column{
     display: grid;
     gap: 1rem;
 }
+
 @media (min-width: 50em) {
     .even-column{
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
     }
+}
+
+ .justify-self-end{
+    justify-self: end;
+ }
+ .vertical-align-items{
+    align-items: center;
+ }
+:where(.flow :not(:first-child)){
+    margin-top: var(--flow-spacer, 3em);
 }
 
 
