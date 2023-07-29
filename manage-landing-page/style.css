@@ -122,24 +122,7 @@ svg {
 
 
 
-.container{
-    --max-width: 1110px;
-    --padding: 1rem;
 
-    width: min(var(--max-width), 100% - (var(--padding) * 2));
-    margin-inline: auto;
-}
-
-.even-column{
-    display: grid;
-    gap: 1rem;
-}
-@media (min-width: 50em) {
-    .even-column{
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
-    }
-}
 /* General styling */
 
 .primary-header {
@@ -159,6 +142,15 @@ body{
     font-size: var(--fs-body);
     font-family: var(--ff-body);
     color: var(--clr-primary-400);
+}
+
+p:not([class]){
+    opacity: 0.7;
+    max-width: 35ch;
+}
+
+p[data-width="wide"] {
+    max-width: 46ch;
 }
 
 .button{
@@ -270,6 +262,32 @@ body{
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+.container{
+    --max-width: 1110px;
+    --padding: 1rem;
+
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+}
+ 
+:where(.flow :not(:first-child)){
+    margin-top: var(--flow-spacer, 3em);
+}
+
+.even-column{
+    display: grid;
+    gap: 1rem;
+}
+@media (min-width: 50em) {
+    .even-column{
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
+
+
+
 .text-primary-400 {
     color: var(--clr-primary-400);
 }
