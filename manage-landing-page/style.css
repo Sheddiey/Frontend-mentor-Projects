@@ -199,6 +199,20 @@ p[data-width="wide"] {
 .nav-list a:focus{
     color: var(--clr-accent-400);
 }
+/* cta */
+.cta{
+    position: relative;
+}
+.cta::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image: url(
+        'images/'
+    );
+    background: red;
+}
 
 
 @media (max-width: 50em) {
