@@ -14,7 +14,74 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>ggg</h1>
+    <header class="primary-header">
+      <div class="container">
+        <a href="#"><img src="/images/logo.svg" alt="W" /></a>
+        <button
+          style="display: none"
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <img
+            class="icon-menu"
+            src="/images/icon-menu.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            src="/images/icon-menu-close.svg"
+            alt=""
+            class="icon-close"
+            aria-hidden="true"
+          />
+          <span class="visually-hidden">menu</span>
+        </button>
+        <nav class="primary-navigation">
+          <ul aria-label="primary" role="list" class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Categories</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container-main">
+          <div><img src="/images/image-web-3-desktop.jpg" alt="" /></div>
+          <div>
+            <h1 class="secondary-heading">New</h1>
+            <h2 class="tertiary-heading">Hydrogen vs Electric cars</h2>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+            <hr />
+            <h2 class="tertiary-heading">The Downsides of AI Artistry</h2>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+            <hr />
+            <h2 class="tertiary-heading">Is VC Funding Drying Up?</h2>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
+          <div>
+            <h1 class="primary-heading">The Bright Future of Web 3.0?</h1>
+          </div>
+          <div>
+            <p></p>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </section>
+    </main>
 
     <script type="module" src="/main.js"></script>
   </body>
