@@ -17,36 +17,37 @@
     <div class="grid-container">
       <header class="primary-header">
         <div class="container">
-          <div class="logo"><img src="/images/logo.svg" alt="" /></div>
-          <button
-            style="display: none"
-            class="mobile-nav-toggle"
-            aria-controls="primary-navigation"
-            aria-expanded="false"
-          >
-            <img
-              class="icon-menu"
-              src="/images/icon-menu.svg"
-              alt=""
-              aria-hidden="true"
-            />
-            <img
-              src="/images/icon-menu-close.svg"
-              alt=""
-              class="icon-close"
-              aria-hidden="true"
-            />
-            <span class="visually-hidden">menu</span>
-          </button>
-          <nav class="primary-navigation">
-            <ul aria-label="primary" role="list" class="nav-list">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">New</a></li>
-              <li><a href="#">Popular</a></li>
-              <li><a href="#">Trending</a></li>
-              <li><a href="#">Categories</a></li>
-            </ul>
-          </nav>
+          <div class="p-nav">
+            <div class="logo"><img src="/images/logo.svg" alt="" /></div>
+            <button
+              class="mobile-nav-toggle"
+              aria-controls="primary-navigation"
+              aria-expanded="false"
+            >
+              <img
+                class="icon-menu"
+                src="/images/icon-menu.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <img
+                src="/images/icon-menu-close.svg"
+                alt=""
+                class="icon-close"
+                aria-hidden="true"
+              />
+              <span class="visually-hidden">menu</span>
+            </button>
+            <nav class="primary-navigation" id="primary-navigation">
+              <ul aria-label="primary" role="list" class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Popular</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Categories</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </header>
 
@@ -109,7 +110,9 @@
               <div>
                 <h1 class="numbers">03</h1>
                 <h2 class="ads-heading">The Growth of Gaming</h2>
-                <p class="p">How the pandemic has sparked fresh opportunities.</p>
+                <p class="p">
+                  How the pandemic has sparked fresh opportunities.
+                </p>
               </div>
             </div>
           </div>
