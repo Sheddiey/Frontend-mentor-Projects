@@ -203,11 +203,30 @@ p[data-width="wide"] {
 .primary-footer{
     --logo-color: var(--clr-neutral-100);
 }
-.primary-footer .even-column > * {
-    outline: 2px solid red;
-    margin-inline: auto;
+.primary-footer-wraper {
+    display: grid;
+    gap: var(--size-700);
+    grid-template-areas: 
+    'form'
+    'nav'
+    'logo-social';
 }
 
+.primary-footer-wraper > :nth-child(1) {
+    grid-area: logo-social;
+}
+.primary-footer-wraper > :nth-child(2) {
+    grid-area: nav;
+}
+.primary-footer-wraper > :nth-child(3) {
+    grid-area: form;
+}
+
+
+
+.primary-footer-wraper > * {
+    margin-inline: auto;
+}
 
 /* footer navigation */
 .footer-nav{
