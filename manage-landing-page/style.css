@@ -211,7 +211,11 @@ p[data-width="wide"] {
     'nav'
     'logo-social';
 }
-
+@media (min-width: 50em) {
+    .primary-footer-wraper {
+        grid-template-areas: 'logo-social nav form';
+    }
+}
 .primary-footer-wraper > :nth-child(1) {
     grid-area: logo-social;
 }
@@ -223,11 +227,11 @@ p[data-width="wide"] {
 }
 
 
-
+@media (mx-width: 50em) {
 .primary-footer-wraper > * {
     margin-inline: auto;
 }
-
+}
 /* footer navigation */
 .footer-nav{
     columns: 2;
