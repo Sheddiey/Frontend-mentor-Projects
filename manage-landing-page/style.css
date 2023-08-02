@@ -220,10 +220,7 @@ p[data-width="wide"] {
     'nav'
     'logo-social';
 }
-.flow > *{
-    margin: 0;
-    padding: var(--size-200);
-}
+
 
 
 .primary-footer-logo-social {
@@ -592,6 +589,11 @@ color: var(--clr-accent-400);
 .padding-block-600 {
     padding-block: var(--size-600);
 }
+
+.margin-bottom-700{
+    margin-block-end: var(--size-700);
+}
+
 .display-sm-none {
     display: none;
 }
