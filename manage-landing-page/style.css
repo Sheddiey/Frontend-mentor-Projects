@@ -459,23 +459,24 @@ color: var(--clr-accent-400);
 .slider {
     display: flex;
     list-style: none;
-    /* gap: 0; */
+    gap: var(--size-600); 
   }
 
   .slider > * {
     position: relative;
-    padding: var(--size-800) var(--size-600);
-    width: 200px;
+    width: 400px;
     flex: 0 0 auto;
-    border-radius: var(--size-300);
+  }
+  .slider-content {
+    padding: var(--size-700) var(--size-600);
+    border-radius: var(--size-100);
     background: var(--clr-neutral-200);
   }
   .slider img {
     width: var(--size-800);
-    position: absolute;
-    inset: 0;
+    position: relative;
+    top: calc(var(--size-800) / 2);
     margin-inline: auto;
-    top: -32px;
   }
 
 /* Utility classes */
