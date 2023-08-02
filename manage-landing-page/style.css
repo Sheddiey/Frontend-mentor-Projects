@@ -153,6 +153,7 @@ p[data-width="wide"] {
     max-width: 46ch;
 }
 
+/*  button  */
 .button{
     cursor: pointer;
     display: inline-flex;
@@ -171,6 +172,11 @@ p[data-width="wide"] {
     background-color: var(--clr-accent-100);
     color: var(--clr-accent-400);
 }
+
+.button[data-shadow="none"] {
+    box-shadow: none;
+}
+
 .button:hover,
 .button:focus-visible {
     background-color: var(--clr-accent-300);
@@ -205,29 +211,57 @@ p[data-width="wide"] {
 }
 .primary-footer-wraper {
     display: grid;
-    gap: var(--size-700);
+    gap: var(--size-600);
     grid-template-areas: 
     'form'
     'nav'
     'logo-social';
 }
+.flow > *{
+    margin: 0;
+    padding: var(--size-200);
+}
+
+
+.primary-footer-logo-social {
+    grid-area: logo-social;
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: var(--size-700);
+}
+.primary-footer-nav {
+    grid-area: nav;
+}
+.primary-footer-form {
+    grid-area: form;
+
+    display: grid;
+    align-content: space-between;
+}
+.primary-footer-form form{
+    display: flex;
+    gap: var(--size-200);
+}
+.primary-footer-form input:where([type="email"], [type="text"]){
+    border-radius: 100vw;
+    border: 0;
+    padding: var(--size-100) var(--size-400);
+}
+
 @media (min-width: 50em) {
     .primary-footer-wraper {
         grid-template-areas: 'logo-social nav form';
     }
-}
-.primary-footer-wraper > :nth-child(1) {
-    grid-area: logo-social;
-}
-.primary-footer-wraper > :nth-child(2) {
-    grid-area: nav;
-}
-.primary-footer-wraper > :nth-child(3) {
-    grid-area: form;
+    .primary-footer-logo-social{
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: var(--size-700);
+    }
 }
 
-
-@media (mx-width: 50em) {
+@media (max-width: 50em) {
 .primary-footer-wraper > * {
     margin-inline: auto;
 }
@@ -235,6 +269,7 @@ p[data-width="wide"] {
 /* footer navigation */
 .footer-nav{
     columns: 2;
+    gap: clamp(var(--size-400), 10vw, var(--size-900));
 }
 .footer-nav a {
     color: var(--clr-accent-100);
@@ -257,11 +292,11 @@ color: var(--clr-accent-400);
   .social-list a:is(:hover, :focus) .social-icon {
     fill: var(--clr-accent-400);
 } 
-/* .logo-manage{
+.logo-manage{
     width: var(--size-900);
     aspect-ratio: 1;
     
-} */
+} 
 
 @media (min-width: 50em) {
     .social-list{
