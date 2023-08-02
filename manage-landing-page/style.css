@@ -462,6 +462,10 @@ color: var(--clr-accent-400);
     gap: var(--size-600); 
   }
 
+  .a11y-slider-container {
+    margin-block: var(--size-700);
+  }
+
   .slider > * {
     position: relative;
     width: 100%;
@@ -487,6 +491,30 @@ color: var(--clr-accent-400);
     position: relative;
     top: calc(var(--size-800) / 2);
     margin-inline: auto;
+  }
+
+  .a11y-slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-block: var(--size-500);
+    gap: var(--size-300);
+  }
+
+  .a11y-slider-dots li{
+    display: block;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+  }
+  .a11y-slider-dots li button {
+    display: block;
+    font-size: 0;
+    text-indent: -9999px;
+    border: 1px solid var(--clr-accent-400) !important;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
   }
 
 /* Utility classes */
