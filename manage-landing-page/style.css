@@ -464,8 +464,18 @@ color: var(--clr-accent-400);
 
   .slider > * {
     position: relative;
-    width: 400px;
+    width: 100%;
     flex: 0 0 auto;
+  }
+  @media (min-width: 30em) {
+    .slider > * {
+        width: 50%;
+      }
+  }
+  @media (min-width: 50em) {
+    .slider > * {
+        width: 33%;
+      }
   }
   .slider-content {
     padding: var(--size-700) var(--size-600);
