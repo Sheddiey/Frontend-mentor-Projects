@@ -17,6 +17,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.css"
+    />
+    <script
+      src="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.js"
+      defer
+    ></script>
   </head>
   <body>
     <header class="primary-header">
@@ -86,7 +94,10 @@
       <section class="padding-block-900">
         <div class="container">
           <div class="even-column">
-            <div class="flow text-center-sm-only margin-bottom-700" style="--flow-spacer: 1.5rem">
+            <div
+              class="flow text-center-sm-only margin-bottom-700"
+              style="--flow-spacer: 1.5rem"
+            >
               <h2 class="fs-secondary-heading fw-bold">
                 What’s different about Manage?
               </h2>
@@ -100,7 +111,11 @@
               <ul class="numbered-items flow" role="list">
                 <li>
                   <div class="flow" style="--flow-spacer: 1em">
-                    <h3 class="numbered-items-title numbered-items-title fs-600 fw-bold">Track company-wide progress</h3>
+                    <h3
+                      class="numbered-items-title numbered-items-title fs-600 fw-bold"
+                    >
+                      Track company-wide progress
+                    </h3>
                     <p class="numbered-items-body" data-width="wide">
                       See how your day-to-day tasks fit into the wider vision.
                       Go from tracking progress at the milestone level all the
@@ -111,7 +126,9 @@
                 </li>
                 <li>
                   <div class="flow" style="--flow-spacer: 1em">
-                    <h3 class="numbered-items-title fs-600 fw-bold">Advanced built-in reports</h3>
+                    <h3 class="numbered-items-title fs-600 fw-bold">
+                      Advanced built-in reports
+                    </h3>
                     <p class="numbered-items-body" data-width="wide">
                       Set internal delivery estimates and track progress toward
                       company goals. Our customisable dashboard helps you build
@@ -139,9 +156,23 @@
         </div>
       </section>
 
-      <section class="carousel | padding-block-700">
+      <section class="carousel | padding-block-700 text-center">
         <h2 class="fs-secondary-heading fw-bold">What they’ve said</h2>
         <!-- Corouselhere -->
+        <ul class="slider ">
+          <li>
+            <img src="/images/avatar-ali.png" alt="" />
+            <h3 class="fw-bold">Ali Bravo</h3>
+            <p data-width="wide">
+              “We have been able to cancel so many other subscriptions since
+              using Manage. There is no more cross-channel confusion and
+              everyone is much more focused.”
+            </p>
+          </li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </ul>
         <button class="button">Get Started</button>
       </section>
 
