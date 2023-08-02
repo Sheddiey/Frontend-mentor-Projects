@@ -464,6 +464,7 @@ color: var(--clr-accent-400);
 
   .a11y-slider-container {
     margin-block: var(--size-700);
+    margin-inline: var(--size-400);
   }
 
   .slider > * {
@@ -472,6 +473,13 @@ color: var(--clr-accent-400);
     flex: 0 0 auto;
   }
   @media (min-width: 30em) {
+    .slider {
+    scroll-padding-inline: 25px;
+    }
+    .a11y-slider-container {
+        margin-inline: 0;
+      }
+    
     .slider > * {
         width: 50%;
       }
@@ -517,6 +525,11 @@ color: var(--clr-accent-400);
     border-radius: 100%;
   }
 
+  .a11y-slider-dots li button.active {
+    background: var(--clr-accent-400);
+  }
+
+  
 /* Utility classes */
 .visually-hidden {
     position: absolute;
