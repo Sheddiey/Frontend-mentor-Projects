@@ -492,8 +492,14 @@ color: var(--clr-accent-400);
 .padding-block-900 {
     padding-block: var(--size-900);
 }
+.padding-block-800 {
+    padding-block: var(--size-800);
+}
 .padding-block-700 {
     padding-block: var(--size-700);
+}
+.padding-block-600 {
+    padding-block: var(--size-600);
 }
 .display-sm-none {
     display: none;
