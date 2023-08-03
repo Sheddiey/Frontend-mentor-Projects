@@ -251,7 +251,7 @@ p[data-width="wide"] {
     padding: var(--size-100) var(--size-400);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 47em) {
     .primary-footer-wraper {
         grid-template-areas: 'logo-social nav form';
     }
@@ -262,7 +262,7 @@ p[data-width="wide"] {
     }
 }
 
-@media (max-width: 50em) {
+@media (max-width:  47em) {
 .primary-footer-wraper > * {
     margin-inline: auto;
 }
@@ -299,7 +299,7 @@ color: var(--clr-accent-400);
     
 } 
 
-@media (min-width: 50em) {
+@media (min-width: 47em) {
     .social-list{
         display: flex;
         gap: var(--size-300);
@@ -317,7 +317,7 @@ color: var(--clr-accent-400);
     text-align: center;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 47em) {
         .cta {
             text-align: left;
         }
@@ -337,7 +337,7 @@ color: var(--clr-accent-400);
 }
 
 
-@media (max-width: 50em) {
+@media (max-width:  47em) {
     .primary-navigation{
         display: none;
         position: fixed;
@@ -484,7 +484,7 @@ color: var(--clr-accent-400);
         width: 50%;
       }
   }
-  @media (min-width: 50em) {
+  @media (min-width: 47em) {
     .slider > * {
         width: 33%;
       }
@@ -532,21 +532,32 @@ color: var(--clr-accent-400);
 
 /* image with blob-bg */
 
-.image-with-blob-bg {
-    /* position: relative;
-*/}
 
-.image-with-blob-bg::before {
+@media (max-width:  47em) {
+    .hero-image{
+        order: -1;
+    }
+}
+
+.hero-image::before {
     content: '';
     position: absolute;
     z-index: -1;
     right: 0;
     top: 0;
-    width: 50%;
-    aspect-ratio: 1 / 1.3;
+    width: 87%;
+    max-height: 70vh;
+    max-height: 70dvh;
+    aspect-ratio: 1 / 1.2;
     background-image: url("images/bg-tablet-pattern.svg");
     background-position: bottom left;
     background-repeat: no-repeat;
+}
+
+@media (min-width: 47em) {
+    .hero-image::before {
+        width: 45%;
+    }
 }
 
 
@@ -578,7 +589,7 @@ color: var(--clr-accent-400);
     gap: 1rem;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 47em) {
     .even-column{
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
@@ -591,7 +602,7 @@ color: var(--clr-accent-400);
  .vertical-align-items{
     align-items: center;
  }
- @media (min-width: 50em) {
+ @media (min-width: 47em) {
     .justify-self-end-md{
         justify-self: end;
      }
@@ -689,6 +700,10 @@ color: var(--clr-accent-400);
 
 .margin-bottom-700{
     margin-block-end: var(--size-700);
+}
+
+.mx-auto {
+    margin-inline: auto;
 }
 
 .display-sm-none {
