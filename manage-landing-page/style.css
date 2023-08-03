@@ -220,19 +220,31 @@ p[data-width="wide"] {
     grid-template-areas: 
     'form'
     'nav'
-    'logo-social';
+    'social'
+    'logo'
+    'copyright';
+}
+
+.primary-footer-logo {
+    grid-area: logo;
+}
+.primary-footer-form {
+    grid-area: form;
+}
+.primary-footer-copyright {
+    grid-area: copyright;
 }
 
 
-
-.primary-footer-logo-social {
+/* .primary-footer-logo-social {
     grid-area: logo-social;
 
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     gap: var(--size-700);
-}
+} */
+
 .primary-footer-nav {
     grid-area: nav;
 }
@@ -742,6 +754,9 @@ color: var(--clr-accent-400);
 
 .margin-bottom-700{
     margin-block-end: var(--size-700);
+}
+.margin-top-900 {
+    margin-block-start: var(--size-900);
 }
 
 .mx-auto {
