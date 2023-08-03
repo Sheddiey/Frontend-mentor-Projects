@@ -84,7 +84,8 @@ html:focus-within {
 
 html,
 body{
-    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
 }
 /* Set core body defaults */
 body {
@@ -386,7 +387,7 @@ color: var(--clr-accent-400);
         background: transparent;
         border: 0;
         padding: 0.5em;
-        width: 2.5rem;
+        width: 2rem;
         aspect-ratio: 1;
 
         background-image: url(/images/icon-hamburger.svg);
@@ -547,7 +548,7 @@ color: var(--clr-accent-400);
   }
 
 
-/* image with blob-bg */
+/* hero */
 
 
 @media (max-width:  47em) {
@@ -577,6 +578,30 @@ color: var(--clr-accent-400);
     }
 }
 
+/* sales point */
+.sales-point-blog {
+    position: relative;
+}
+.sales-point-blog::before {
+    content: url("images/bg-tablet-pattern.svg");
+    zoom: 40%;
+    position: absolute;
+    z-index: -1;
+    left: 70%;
+    bottom: 140%;
+    width: 100px;
+}
+
+@media (min-width: 47em) {
+    .sales-point-blog::before {
+        zoom: 70%;
+        position: absolute;
+        z-index: -1;
+        left: -700px;
+        top: 42%;
+        width: 100px;
+    }
+}
 
   
 /* Utility classes */
