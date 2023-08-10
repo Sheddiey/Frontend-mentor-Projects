@@ -56,15 +56,32 @@ const people = [ 'Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mic
 
     //6.Create a list of Boulverands in paris that contain 'de' anywhere in the name
     //https://en.wikipedia.org/wiki/category:Boulevards_in_Paris
-    const category = document.querySelector('.mw-category');
-    const links = Array.from(category.querySelectorAll('a'));
+    // const category = document.querySelector('.mw-category');
+    // const links = Array.from(category.querySelectorAll('a'));
 
-    const de = links
-                .map(link => link.textContent)
-                .filter(streetName => streetName.includes('de'));
+    // const de = links
+    //             .map(link => link.textContent)
+    //             .filter(streetName => streetName.includes('de'));
 
     //7. sort exercise
+    //sort the people alphabetically by last name
     const alpha = people.sort((lastOne, nextOne) => {
-        console.log(lastOne);
-    });
+        const [aLast, aFirst] = lastOne.split(', ');
+        const [bLast, bFirst] = nextOne.split(', ');
+        return aLast > bLast ? 1 : -1;
+        
+    });console.log(alpha)
+
+    //reduce exercise
+    //Sum up the instances of each of these
+    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'walk', 'car', 'van', 'car', 'truck']
+
+    const transportation = data.reduce((obj, item) => {
+        if(!obj[item]){
+            obj[item] = 0;
+        }
+        obj[item]++;
+        return obj;
+    }, {});
+    console.log(transportation);
 
