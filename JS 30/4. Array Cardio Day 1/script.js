@@ -34,18 +34,37 @@ const people = [ 'Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mic
      
     //Array.prototype.sort()
     //3. Sort the inventors by birthdate, oldest to the youngest
-    let birthDate = inventors.sort((inventor1, inventor2) => (inventor1.year < inventor2.year) 
-    ? 1 : (inventor1.year > inventor2.year) ? -1 : 0);
-    birthDate.reverse()
+    // let birthDate = inventors.sort((a, b) => (a.year < b.year) ? 1 : (a.year > b.year) ? -1 : 0);
+    // birthDate.reverse()
+    const birthDate = inventors.sort((a, b) => (a.year > b.year) ? 1 : -1)
     console.table(birthDate);
 
     //Array.prototype.reduce()
     //4. How many years did all the inventors live
+    const totalYearsLived = inventors.reduce((x, y) => {
+        return x + (y.passed - y.year);
+    }, 0);
+    console.table(totalYearsLived)
 
     //5. sort the inventors by years lived
+    const oldest = inventors.sort(function(a, b) {
+        const lastGuy = a.passed - a.year;
+        const nextGuy = b.passed - b.year;
+        return lastGuy > nextGuy ? -1 : 1;
+    })
+    console.table(oldest)
 
     //6.Create a list of Boulverands in paris that contain 'de' anywhere in the name
     //https://en.wikipedia.org/wiki/category:Boulevards_in_Paris
+    const category = document.querySelector('.mw-category');
+    const links = Array.from(category.querySelectorAll('a'));
+
+    const de = links
+                .map(link => link.textContent)
+                .filter(streetName => streetName.includes('de'));
 
     //7. sort exercise
+    const alpha = people.sort((lastOne, nextOne) => {
+        console.log(lastOne);
+    });
 
