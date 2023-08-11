@@ -2,10 +2,11 @@
   --clr-accent-100:  hsl(158, 36%, 37%);
   --clr-accent-200: hsl(212, 21%, 14%);
   --clr-accent-300:  hsl(228, 12%, 48%);
+  --clr-accent-400:  hsl(156, 42%, 18%);
 
 
   --clr-neutral-100:  hsl(0, 0%, 100%);
-  --clr-neutral-200:  hsl(30, 38%, 92%);
+  --clr-neutral-200:  hsl(26, 40%, 92%);
 
   --ff-primary: ;
   --ff-secondary: ;
@@ -23,6 +24,7 @@
   --fs-900: 3.5rem;
   
   --size-100: 0.25rem;
+  --size-150: 0.35rem;
   --size-200: 0.5rem;
   --size-300: 0.75rem;
   --size-400: 1rem;
@@ -104,16 +106,99 @@ svg {
   }
 }
 /* General styling */
-/* utility classes */
-.visually-hidden {
-  position: absolute;
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0,0,0,0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-neutral-200);
+  height: 100vh;
 }
+.container{
+  display: grid;
+  align-items: center;
+  background: var(--clr-neutral-100);
+  outline: 2px solid red;
+  border-radius: var(--size-300);
+}
+@media (min-width: 50em) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+
+  }
+  .img-desktop {
+    display: block;
+    height: 430px;
+    width: 100%;
+  }
+
+}
+.h1-title {
+  letter-spacing: 4px;
+}
+p{
+  font-size: 0.875rem;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-primary-bold);
+  max-width: 32ch;
+  color: var(--clr-accent-300);
+}
+h2{
+  font-size: 2rem;
+  max-width: 12ch;
+  line-height: 1;
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-secondary-bold);
+}
+
+
+/* Button */
+.button {
+  cursor: pointer;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-neutral-100);
+  border: 0;
+  background-color: var(--clr-accent-100);
+  padding-inline: var(--size-700);
+  padding-block: var(--size-150);
+  border-radius: var(--size-200);
+}
+.button:hover,
+.button:focus-visible {
+  background-color: var(--clr-accent-400);
+}
+
+
+.description {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.description > * {
+  padding-block: var(--size-300);
+}
+.current-cost {
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-secondary-bold);
+  font-size: 2rem;
+  color: var(--clr-accent-100);
+}
+
+/* max-width: 50em */
+@media (min-width: 50em){
+  .container{
+    
+  }
+  .visually-hidden {
+    background-image: url(/images/image-product-mobile.jpg);
+  }
+  
+}
+
+
+
+
