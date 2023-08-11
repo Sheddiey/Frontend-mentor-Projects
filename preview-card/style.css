@@ -215,7 +215,17 @@ h2{
   h2{
     max-width: 13ch;
   }
-} 
+}
+.cost {
+  display: flex;
+  gap: var(--size-500);
+}
+.cost > * {
+  display: flex;
+  height: 100%;
+  align-self: center;
+}
+
 
 
 
