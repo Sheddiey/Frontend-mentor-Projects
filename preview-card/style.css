@@ -8,12 +8,12 @@
   --clr-neutral-100:  hsl(0, 0%, 100%);
   --clr-neutral-200:  hsl(26, 40%, 92%);
 
-  --ff-primary: ;
-  --ff-secondary: ;
+  --ff-primary: 'Montserrat', sans-serif;;
+  --ff-secondary: 'Fraunces', serif;;
 
-  --fw-primary-regular: ;
-  --fw-primary-bold: ;
-  --fw-secondary-bold: ;
+  --fw-primary-regular: 500;
+  --fw-primary-bold: 700;
+  --fw-secondary-bold: 700;
 
   --fs-300: 0.8125rem;
   --fs-400: 0.875rem;
@@ -109,21 +109,23 @@ svg {
 body{
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: var(--clr-neutral-200);
   height: 100vh;
 }
 .container{
   display: grid;
-  align-items: center;
   background: var(--clr-neutral-100);
-  outline: 2px solid red;
   border-radius: var(--size-300);
 }
 @media (min-width: 50em) {
+  body{
+    
+    align-items: center;
+  }
   .container {
     grid-template-columns: 1fr 1fr;
     overflow: hidden;
+    align-items: center;
 
   }
   .img-desktop {
@@ -132,12 +134,15 @@ body{
     width: 100%;
   }
 
+  .hidden {
+    display: none;
+  }
 }
 .h1-title {
   letter-spacing: 4px;
 }
 p{
-  font-size: 0.875rem;
+  font-size: 0.675rem;
   font-family: var(--ff-primary);
   font-weight: var(--fw-primary-bold);
   max-width: 32ch;
@@ -145,10 +150,11 @@ p{
 }
 h2{
   font-size: 2rem;
-  max-width: 12ch;
+  max-width: 10ch;
   line-height: 1;
   font-family: var(--ff-secondary);
   font-weight: var(--fw-secondary-bold);
+  color: var(--clr-accent-200);
 }
 
 
@@ -189,15 +195,29 @@ h2{
 }
 
 /* max-width: 50em */
-@media (min-width: 50em){
+ @media (max-width: 50em){
+  body{
+
+  }
   .container{
-    
+    grid-template-rows: 1fr auto;
+    justify-content: start;
+    overflow: hidden;
+    margin-block-start: var(--size-500);
   }
-  .visually-hidden {
-    background-image: url(/images/image-product-mobile.jpg);
+  .img-desktop {
+    display: none;
   }
-  
-}
+  .hidden {
+    width: 100%;
+    height: 250px;
+  } 
+  h2{
+    max-width: 13ch;
+  }
+} 
+
+
 
 
 
