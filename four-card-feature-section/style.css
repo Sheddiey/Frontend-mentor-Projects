@@ -1,6 +1,6 @@
 :root {
-  --clr-accent-100: hsl(0, 78%, 62%);
-  --clr-accent-200: hsl(180, 62%, 55%);
+  --clr-accent-100: hsl(180, 62%, 55%);
+  --clr-accent-200: hsl(0, 78%, 62%);
   --clr-accent-300: hsl(34, 97%, 64%);
   --clr-accent-400: hsl(212, 86%, 64%);
 
@@ -30,10 +30,6 @@
 
 }
 
-.clr-border-top-100 {}
-.clr-border-top-200 {}
-.clr-border-top-300 {}
-.clr-border-top-400 {}
 
 
 body {
@@ -141,7 +137,6 @@ body{
   display: grid;
   width: max-content;
   background-color: #fff;
-  outline: 2px solid red;
   margin-block: var(--size-300);
   padding: var(--size-400);
 }
@@ -184,3 +179,9 @@ body{
 .fs-400{ font-size: 0.875rem; }
 .fs-500{ font-size: 1rem; }
 .fs-600{ font-size: 1.2rem; }
+
+
+.clr-border-top-100 { border-top: 3px solid var(--clr-accent-100);}
+.clr-border-top-200 { border-top: 3px solid var(--clr-accent-200);}
+.clr-border-top-300 { border-top: 3px solid var(--clr-accent-300);}
+.clr-border-top-400 { border-top: 3px solid var(--clr-accent-400);}
