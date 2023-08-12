@@ -102,6 +102,26 @@ svg {
 
 
 /* General styling */
+body{
+  background-color: var(--clr-neutral-300);
+}
+.primary-header {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.primary-header p{
+  
+}
+
+@media (max-width: 50em) {
+  .primary-header p{
+    max-width: 32ch;
+    margin-inline: auto;
+  }
+}
+
+
 
 
 /* utility classes */
