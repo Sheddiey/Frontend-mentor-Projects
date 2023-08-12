@@ -111,7 +111,7 @@ body{
   justify-content: center;
 }
 .primary-header p{
-  
+
 }
 
 @media (max-width: 50em) {
@@ -143,3 +143,8 @@ body{
 .fw-semi-bold {
   font-weight: var(--fw-semi-bold);
 }
+
+.fs-300{ font-size: 0.75rem; }
+.fs-400{ font-size: 0.875rem; }
+.fs-500{ font-size: 1rem; }
+.fs-600{ font-size: 1.2rem; }
