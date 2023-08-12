@@ -154,7 +154,15 @@ body{
   width: 32px;
 }
 
-
+/* Desktop */
+@media (min-width: 50em) {
+  containers {
+    grid-template-areas: 
+    'supervisor team-builder calulator'
+    'supervisor karma calculator';
+    grid-template-columns: auto auto;
+  }
+}
 
 /* utility classes */
 .text-neutral-100 {
