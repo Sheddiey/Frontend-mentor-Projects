@@ -113,9 +113,23 @@ svg {
     max-width: 41ch;
   }
 }
-
-
-
+/* mobile */
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 50em) {
+  .primary-header h2 {
+    max-width: 13ch;
+    line-height: 1;
+    text-align: center;;
+  }
+  .primary-header p{
+    max-width: 32ch;
+    text-align: center;
+  }
+}
 
 
 
