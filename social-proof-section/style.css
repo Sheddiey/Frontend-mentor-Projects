@@ -123,6 +123,29 @@ svg {
   justify-content: center;
   text-align: center;
 }
+.container-main {
+  display: grid;
+  gap: var(--size-200);
+}
+.identity {
+  display: flex;
+  gap: var(--size-300);
+  align-items: center;
+}
+.identity img {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+}
+.container {
+  padding: var(--size-400);
+  border-radius: 5px;
+}
+.container p{
+  max-width: 34ch;
+  margin-block-start: var(--size-200);
+}
+
 @media (min-width: 50em) {
   .primary-header h2 {
     max-width: 13ch;
@@ -140,7 +163,7 @@ body {
 @media (max-width: 50em) {
   body{
     margin-inline: var(--size-400);
-    margin-top: var(--size-800);
+    margin-block: var(--size-800);
   }
   .primary-header  {
     display: grid;
