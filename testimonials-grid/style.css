@@ -109,6 +109,22 @@ body {
 .main-container {
     display: grid;
 }
+.cont-daniel {
+    position: relative;
+}
+.pattern-background {
+    display: block;
+    position: absolute;
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 100px;
+    right: 0;
+    top: 0;
+}
+.cont-daniel h2{
+    z-index: 2;
+}
 /* containers */
 .container {
     display: grid;
