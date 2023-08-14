@@ -104,10 +104,15 @@ svg {
 }
 /* general styling */
 body {
+    /* display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; */
     background-color: var(--clr-neutral-200);
 }
 .main-container {
     display: grid;
+    gap: var(--size-450);
 }
 .cont-daniel {
     position: relative;
@@ -117,6 +122,7 @@ body {
     position: absolute;
     background-image: url(/images/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
+    background-size: contain;
     width: 120px;
     height: 100px;
     right: 0;
@@ -128,7 +134,6 @@ body {
 /* containers */
 .container {
     display: grid;
-    padding: var(--size-600);
     border-radius: 9px;
 }
 /* mobile */
@@ -137,10 +142,82 @@ body {
         margin-inline: var(--size-400);
         margin-block: var(--size-700);
     }
-    .main-container {
-        gap: var(--size-450);
+    .container {
+        padding: var(--size-600);
     }
 }
+
+/* desktop */
+@media (min-width: 50em) {
+    .cont-daniel {
+        grid-area: cont-daniel;
+    }
+    .jonathan {
+        grid-area: jonathan;
+    }
+    .kira {
+        grid-area: kira;
+    }
+    .jeanette {
+        grid-area: jeanette;
+    }
+    .patrick {
+        grid-area: patrick;
+    }
+    body {
+        height: 100vh;
+        overflow: hidden;
+    }
+    .main-container {
+        height: 100%;
+        overflow: hidden;
+        margin: 3rem;
+        /* display: grid;
+        align-items: center;
+        justify-content: center; */
+        grid-template-areas: 
+        'cont-daniel cont-daniel jonathan kira'
+        'jeanette patrick patrick kira'
+        ;
+    }
+    .jeanette h2 {
+        max-width: 16ch;
+    }
+    .jeanette p {
+        max-width: 31ch;
+    }
+    .jonathan h2 {
+        max-width: 22ch;
+    }
+    .jonathan p {
+        max-width: 29ch;
+    }
+    .kira h2 {
+        max-width: 25ch;
+    }
+    .kira p {
+        max-width: 30ch;
+    }
+    .patrick h2 {
+        max-width: 50ch;
+    }
+    .patrick p {
+        max-width: 70ch;
+    }
+    .cont-daniel h2 {
+        max-width: 48ch;
+    }
+    .cont-daniel p {
+        max-width: 74ch;
+    }
+    .container {
+        padding: var(--size-300);
+    }
+    .pattern-background{
+        right: 40px;
+    }
+}
+
 
 /* Utility classes */
 .bg-primary-100 {
