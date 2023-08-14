@@ -157,6 +157,12 @@ svg {
 .clr-p-200 {
     color: var(--clr-p-200);
 }
+.clr-h2-100 {
+    color: var(--clr-neutral-200);
+}
+.clr-h2-200 {
+    color: var(--clr-primary-200);
+}
 
 
 
