@@ -24,7 +24,9 @@
     --size-800: 4rem;
     --size-900: 5rem;
 }
-
+body {
+    font-family: var(--ff-primary);
+}
 /* Utility classes */
 .bg-primary-100 {
     background-color: var(--clr-primary-100);
@@ -39,7 +41,23 @@
 .bg-primary-400-2 {
     background-color: var(--clr-primary-400);
 }
-
+.fs-100 {
+    font-size: var(--size-300);
+}
+.fs-200 {
+    
+}
+.fs-300 {}
+.flex {
+    display: flex;
+    align-items: center;
+    gap: var(--size-300);
+}
+.flex img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
 
 /* Box sizing rules */
 *,
