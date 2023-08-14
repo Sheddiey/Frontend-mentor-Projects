@@ -7,8 +7,11 @@
     --clr-neutral-100: hsl(0, 0%, 81%);
     --clr-neutral-200: hsl(210, 46%, 95%);
 
-    --clr-h4-100: hsla(210, 46%, 95%, 0.5);
-    --clr-p-100: hsla(210, 46%, 95%, 0.7);
+    --clr-h4-100: hsla(0, 0%, 81%, 0.5);
+    --clr-h4-200: hsla(217, 19%, 35%, 0.5);
+
+    --clr-p-100: hsla(0, 0%, 81%, 0.7);
+    --clr-p-200: hsla(217, 19%, 35%, 0.7);
 
     --ff-primary: 'Barlow Semi Condensed', sans-serif;;
 
@@ -30,48 +33,7 @@
 body {
     font-family: var(--ff-primary);
 }
-/* Utility classes */
-.bg-primary-100 {
-    background-color: var(--clr-primary-100);
-}
-.bg-primary-200 {
-    background-color: var(--clr-primary-200);
-}
-.bg-primary-300 {
-    background-color: var(--clr-primary-300);
-}
 
-.bg-primary-400-2 {
-    background-color: var(--clr-primary-400);
-}
-.fs-100 {
-    font-size: var(--size-300);
-}
-.fs-200 {
-    font-size: var(--size-400);
-}
-.fs-300 {
-    font-size: var(--size-200);
-}
-.fw-medium {
-    font-weight: var(--fw-medium);
-}
-.fw-semi-bold {
-    font-weight: var(--fw-semi-bold);
-}
-
-
-
-.flex {
-    display: flex;
-    align-items: center;
-    gap: var(--size-300);
-}
-.flex img {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-}
 
 /* Box sizing rules */
 *,
@@ -140,4 +102,72 @@ svg {
     scroll-behavior: auto !important;
   }
 }
+/* general styling */
 
+/* containers */
+
+
+
+/* Utility classes */
+.bg-primary-100 {
+    background-color: var(--clr-primary-100);
+}
+.bg-primary-200 {
+    background-color: var(--clr-primary-200);
+}
+.bg-primary-300 {
+    background-color: var(--clr-primary-300);
+}
+
+.bg-primary-400-2 {
+    background-color: var(--clr-primary-400);
+}
+.fs-100 {
+    font-size: var(--size-300);
+}
+.fs-200 {
+    font-size: var(--size-400);
+}
+.fs-300 {
+    font-size: var(--size-200);
+}
+.fw-medium {
+    font-weight: var(--fw-medium);
+}
+.fw-semi-bold {
+    font-weight: var(--fw-semi-bold);
+}
+
+/* colors */
+.clr-h3-100 {
+    color: var(--clr-neutral-100);
+}
+.clr-h4-100 {
+    color: var(--clr-h4-100);
+}
+.clr-p-100 {
+    color: var(--clr-p-100);
+}
+.clr-h3-200 {
+    color: var(--clr-primary-200);
+}
+.clr-h4-200 {
+    color: var(--clr-h4-200);
+}
+.clr-p-200 {
+    color: var(--clr-p-200);
+}
+
+
+
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: var(--size-300);
+}
+.flex img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
