@@ -95,3 +95,57 @@ svg {
   }
 }
 
+
+/* general styling */
+body{
+    font-family: var(--ff-primary);
+}
+.container {
+}
+.icon-main {
+    width: 50px;
+}
+.container span {
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-200);
+}
+.container h1 {
+    font-size: 20px;
+    font-weight: var(--fw-light);
+    color: var(--clr-neutral-100);
+}
+.container p{
+    font-size: 12px;
+    font-weight: var(--fw-light);
+    color: var(--clr-neutral-200);
+}
+.illustration {
+    width: 70%;
+}
+.icons {
+    width: 15px;
+    aspect-ratio: 1;
+}
+
+/* form */
+.email {
+    border-radius: 100vw;
+    padding-inline: 10px;
+    font-size: 12px;
+    padding-block: 5px;
+    min-width: 10rem;
+}
+input {
+    border: 1px solid var(--clr-neutral-100);
+}
+/* button */
+.button {
+    border-radius: 100vw;
+    padding-inline: 20px;
+    padding-block: 5px;
+    font-size: 12px;
+    color: white;
+    font-weight: var(--fw-bold);
+    border: 0;
+    background-color: var(--clr-primary-100);
+}
