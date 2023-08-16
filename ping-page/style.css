@@ -191,8 +191,8 @@ input {
     
 }
 
-.social-list li {
-    display: flex;
+.social-list li a {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     border: 1px solid var(--clr-neutral-100);
@@ -200,9 +200,11 @@ input {
     width: 23px;
     height: 23px;
     cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-primary-100);
 }
-.social-list li:hover,
-.social-list li:focus-visible {
+.social-list li a:hover,
+.social-list li a:focus-visible {
   background-color: var(--clr-primary-100);
 }
 i:hover,
@@ -225,7 +227,6 @@ i:focus {
   }
 }
 .hide {
-  display: none;
   margin-block-start: var(--size-200);
 }
 
@@ -267,4 +268,23 @@ i:focus {
   .hide {
     text-align: center;
   }
+}
+.form-left {
+  display: grid;
+}
+input.error{
+  border-color: var(--clr-secondary-200);
+}
+
+input.error::placeholder {
+  color: var(--clr-secondary-200);
+}
+
+form small {
+  color: var(--clr-secondary-200);
+  font-size: 14px;
+  font-style: italic;
+  z-index: 100;
+  display: none;
+  margin: 0 20px 40px;
 }
