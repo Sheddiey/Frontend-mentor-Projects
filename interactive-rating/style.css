@@ -119,6 +119,16 @@ body{
   border-radius: 25px;
 }
 
+.star {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(210, 19%, 18%);
+}
+
 .box-body p{
   max-width: 35ch;
 }
