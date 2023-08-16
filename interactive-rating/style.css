@@ -165,6 +165,11 @@ body{
   background-color: hsl(210, 19%, 18%);
   color: var(--clr-neutral-200);
 }
+@media (max-width: 50em) {
+  .container {
+    margin-inline: var(--size-500);
+  }
+}
 
 /* utility classes */
 .fw-regular {
