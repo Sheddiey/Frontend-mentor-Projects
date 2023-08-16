@@ -114,12 +114,13 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--clr-accent-100);
-  color: var(--clr-neutral-100)
+  background-color: hsl(215, 25%, 14%);
+  color: var(--clr-neutral-100);
+  border-radius: 25px;
 }
 
 .box-body p{
-  max-width: 24ch;
+  max-width: 35ch;
 }
 .box-1 > * {
   margin: var(--size-500);
@@ -133,14 +134,27 @@ body{
   background-color: var(--clr-primary-100);
   padding-block: 4px;
   font-size: 15px;
+  margin-bottom: var(--size-300);
 }
 
 .buttons {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-block: var(--size-600);
 }
-
+.buttons button{
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  border: 0;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(210, 19%, 18%);
+  color: var(--clr-neutral-200);
+}
 
 /* utility classes */
 .fw-regular {
@@ -159,4 +173,7 @@ body{
 
 .clr-100 {
   color: var(--clr-neutral-300);
+}
+.margin-block-start {
+  margin-block: var(--size-500);
 }
