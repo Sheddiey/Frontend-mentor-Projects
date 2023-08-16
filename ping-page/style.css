@@ -221,6 +221,7 @@ i:focus {
   .grid {
     display: grid;
     grid-template-columns: 1fr auto;
+    gap: var(--size-200);
   }
   .button{
     height: min-content;
