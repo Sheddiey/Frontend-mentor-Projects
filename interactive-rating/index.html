@@ -11,12 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
       <div class="container">
-        <div class="box-1">
+        <div class="box-1 hide">
           <div class="star">
             <img src="/images/icon-star.svg" alt="" />
           </div>
@@ -37,12 +37,17 @@
             <button type="submit" class="submit fw-regular">SUBMIT</button>
           </div>
         </div>
-        <div class="box-2 hide">
+        <div class="box-2">
           <div class="box-body">
-            <img src="/images/illustration-thank-you.svg" alt="" />
-            <p>You selected 4 out of 5</p>
-            <h1>Thank you!</h1>
-            <p>
+            <div class="illustration">
+              <img src="/images/illustration-thank-you.svg" alt="" />
+            </div>
+            <div class="rating margin-block-start">
+              <p class="fs-100">You selected 4 out of 5</p>
+            </div>
+
+            <h1 class="fw-bold fs-200 ">Thank you!</h1>
+            <p class="fs-100 clr-100 margin-block">
               We appreciate you taking the time to give a rating. If you ever
               need more support, don’t hesitate to get in touch!
             </p>

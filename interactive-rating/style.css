@@ -182,6 +182,30 @@ body{
   }
 }
 
+
+/* thankyou section */
+.box-2 {
+  text-align: center;
+  margin-block: var(--size-600);
+  margin-inline: var(--size-500);
+}
+.illustration {
+  display: flex;
+  justify-content: center;
+}
+
+.rating {
+  color: var(--clr-primary-100);
+  max-width: max-content;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: hsl(210, 19%, 18%);
+  border-radius: 100vw;
+  padding-inline: 10px;
+  padding-block: 2px;
+}
+
 /* utility classes */
 .fw-regular {
   font-weight: var(--fw-regular);
@@ -203,3 +227,7 @@ body{
 .margin-block-start {
   margin-block: var(--size-500);
 }
+.margin-block {
+  margin-block: var(--size-100);
+}
+
