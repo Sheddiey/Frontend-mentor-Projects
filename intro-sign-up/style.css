@@ -110,6 +110,10 @@ body {
 /* general styling */
 .container {
   display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-block: var(--size-800);
+  text-align: center;
 }
 
 .section1 {
@@ -128,20 +132,33 @@ body {
   max-width: 20ch;
 }
 
+.section1 {
+  display: grid;
+  justify-content: center;
+  margin-block: var(--size-500);
+}
+.form {
+   padding: var(--size-500);
+}
+.form > * {
+  padding: var(--size-300);
+}
+.form p {     
+  font-size: var(--size-300);
+}
 /* mobile */
 @media (max-width: 47em) {
   .column1 p {
     max-width: 32ch;
+    margin-block: var(--size-400);
   }
   .section1 p {
     max-width: 23ch;
   }
   .form p {
     max-width: 35ch;
-    font-size: var(--size-300);
-  } 
 }
-
+} 
 
 
 /* Utility classes */
@@ -165,6 +182,9 @@ body {
 }
 .clr-300 {
   color: hsl(1, 68%, 72%);
+}
+.clr-400 {
+  color: hsl(250, 10%, 76%);
 }
 .fs-100 {
   font-size: 1rem;
