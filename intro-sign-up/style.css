@@ -97,10 +97,18 @@ svg {
   }
 }
 
-
+@media (min-width: 47em) {
+  body {
+    background-image: url(/images/bg-intro-desktop.png);
+  }
+}
+@media (max-width: 47em) {
+  body {
+    background-image: url(/images/bg-intro-mobile.png);
+  }
+}
 body {
   font-family: var(--ff-primary);
-  background-image: url(/images/bg-intro-desktop.png);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -118,6 +126,8 @@ body {
 
 .section1 {
   background-color: var(--clr-accent-100);
+  padding-block: var(--size-400);
+  box-shadow: 0px 10px 0px hsl(359, 62%, 63%);
 }
 .form {
   display: grid;
@@ -126,9 +136,14 @@ body {
 }
 .section2 {
   background-color: var(--clr-primary-200);
+  border-radius: 7px;
   border: 0;
 }
-.column1 h1 {
+.column1 {
+  display: grid;
+  width: 100%;
+}
+.column1 h1{
   max-width: 20ch;
 }
 
@@ -136,9 +151,12 @@ body {
   display: grid;
   justify-content: center;
   margin-block: var(--size-500);
+  border-radius: 10px;
 }
 .form {
    padding: var(--size-500);
+   border-radius: 10px;
+   box-shadow: 0px 10px 0px hsl(359, 62%, 63%);
 }
 .form > * {
   padding: var(--size-300);
@@ -159,6 +177,8 @@ body {
     max-width: 35ch;
 }
 } 
+
+/* desktop */
 
 
 /* Utility classes */
