@@ -161,7 +161,7 @@ body {
    box-shadow: 0px 10px 0px hsl(359, 62%, 63%);
 }
 .form > * {
-  padding: var(--size-300);
+  padding: var(--size-00);
 }
 .form p {     
   font-size: 12px;
@@ -192,11 +192,17 @@ body {
 @media (min-width: 47em) {
   .container {
     grid-template-columns: 1fr 1fr;
+    margin-inline: var(--size-400);
   }
   .column1 p{
     max-width: 50ch;
   }
   
+}
+/* error */
+.error {
+  text-align: right;
+  outline: 2px solid red;
 }
 
 /* Utility classes */
