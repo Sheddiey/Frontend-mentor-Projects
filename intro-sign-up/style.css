@@ -97,3 +97,78 @@ svg {
   }
 }
 
+
+body {
+  font-family: var(--ff-primary);
+  background-image: url(/images/bg-intro-desktop.png);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--clr-primary-100);
+}
+
+/* general styling */
+.container {
+  display: grid;
+}
+
+.section1 {
+  background-color: var(--clr-accent-100);
+}
+.form {
+  display: grid;
+  gap: var(--size-400);
+  background-color: hsl(0, 0%, 100%);
+}
+.section2 {
+  background-color: var(--clr-primary-200);
+  border: 0;
+}
+.column1 h1 {
+  max-width: 20ch;
+}
+
+/* mobile */
+@media (max-width: 47em) {
+  .column1 p {
+    max-width: 32ch;
+  }
+  .section1 p {
+    max-width: 23ch;
+  }
+  .form p {
+    max-width: 35ch;
+    font-size: var(--size-300);
+  } 
+}
+
+
+
+/* Utility classes */
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+.clr-100 {
+  color: white;
+}
+.clr-200 {
+  color: hsl(3, 100%, 96%);
+}
+.clr-300 {
+  color: hsl(1, 68%, 72%);
+}
+.fs-100 {
+  font-size: 1rem;
+}
+.fs-200 {
+  font-size: var(--size-450);
+}
