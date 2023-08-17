@@ -146,6 +146,7 @@ body{
   font-size: 15px;
   margin-bottom: var(--size-300);
   cursor: pointer;
+  transition: all 400ms ease-in-out;
 }
 .submit:hover {
   background-color: var(--clr-neutral-100);
@@ -170,10 +171,17 @@ body{
   background-color: hsl(210, 19%, 18%);
   color: var(--clr-neutral-200);
   cursor: pointer;
+  transition: all 600ms;
 }
 .buttons button:hover{
   background-color: var(--clr-primary-100);
   color: var(--clr-neutral-100);
+  transform: rotate(360deg);
+}
+
+.selected {
+  background-color: var(--clr-primary-100) !important;
+  color: var(--clr-neutral-100) !important;
 }
 
 @media (max-width: 50em) {
@@ -225,9 +233,14 @@ body{
   color: var(--clr-neutral-300);
 }
 .margin-block-start {
-  margin-block: var(--size-500);
+  margin-block-start: var(--size-500);
 }
 .margin-block {
   margin-block: var(--size-100);
 }
 
+.error-msg {
+  color: rgb(242, 47, 47);
+  justify-content: center;
+  margin-block: var(--size-200);
+}

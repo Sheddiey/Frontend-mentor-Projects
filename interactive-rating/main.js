@@ -1,12 +1,12 @@
 const buttons = document.querySelectorAll('.buttons button');
 const selectedRating = document.querySelector('.selected-rating');
-const error = document.querySelector('.eror-msg')
+const error = document.querySelector('.error-msg')
 const box2 = document.querySelector('.box-2');
 const box1 = document.querySelector('.box-1');
 const submit = document.querySelector('.submit');
 let selected = "";
 
-butttons.forEach( btn => {
+buttons.forEach( btn => {
   btn.addEventListener('click', e => {
     removeSelectedClasses();
     selected = e.target.textContent
@@ -14,7 +14,7 @@ butttons.forEach( btn => {
   })
 });
 
-submit.addEventListener('click', e=> {
+submit.addEventListener('click', e => {
   if(selected === "") {
     addButtonErrors()
     setTimeout(() => {
@@ -29,3 +29,24 @@ submit.addEventListener('click', e=> {
 });
 
 
+function addButtonErrors() {
+  error.classList.remove('hide');
+  buttons.forEach(btn => {
+    btn.classList.add('error')
+  })
+}
+
+
+function removeButtonErrors () {
+  error.classList.add('hide')
+  buttons.forEach(btn => {
+    btn.classList.remove('error')
+  }) 
+}
+
+
+function removeSelectedClasses () {
+  buttons.forEach(btn => {
+    btn.classList.remove('selected')
+  })
+}
