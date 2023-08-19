@@ -125,6 +125,8 @@ body{
   left: 50%;
   top: -25px;
   transform: translate(-50%);
+  outline: 0;
+  border: 0;
 }
 .dice:hover,
 .dice:focus-visible {
@@ -148,7 +150,9 @@ body{
 .divider {
   margin-block: 1.5rem;
 }
-
+.hide{
+  display: none;
+}
 /* Utility classes */
 .fw-extra-bold {
   font-weight: var(--fw-extra-bold);
