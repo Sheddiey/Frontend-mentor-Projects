@@ -153,6 +153,27 @@ body{
 .hide{
   display: none;
 }
+.divider {
+  background: url(/images/pattern-divider-desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* mobile */
+@media (max-width: 47em) {
+  .divider {
+    background: url(/images/pattern-divider-mobile.svg);
+    background-repeat: no-repeat;
+  }
+}
+
+
+
 /* Utility classes */
 .fw-extra-bold {
   font-weight: var(--fw-extra-bold);
