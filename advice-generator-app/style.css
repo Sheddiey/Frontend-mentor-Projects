@@ -94,31 +94,54 @@ svg {
 
 body{
   background-color: var(--clr-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: var(--ff-primary);
 }
 
 /* general styling */
 .container {
   background-color: var(--clr-dark-grayish-blue);
   color: var(--clr-light-cyan);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 350px;
+  padding: var(--size-500);
+  border-radius: var(--size-400);
+  position: relative;
+  margin-inline: var(--size-400);
 }
 .dice {
   background-color: var(--clr-neon-green);
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   position: relative;
   cursor: pointer;
+  left: 50%;
+  top: -25px;
+  transform: translate(-50%);
 }
 .dice img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 20px;
+  height: 15px;
   aspect-ratio: 1;
 }
 .container h2 {
   text-transform: uppercase;
+  font-size: var(--size-200);
+  letter-spacing: 3px;
+  margin-block-end: 15px;
+}
+.divider {
+  margin-block: 1.5rem;
 }
 
 /* Utility classes */
