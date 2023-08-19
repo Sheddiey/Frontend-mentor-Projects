@@ -8,7 +8,10 @@ inputs.forEach(input => {
     })
 
     input.addEventListener('focus', removeErrorMessage);
+    
 })
+
+
 
 
 function addErrorMessage(e) {
