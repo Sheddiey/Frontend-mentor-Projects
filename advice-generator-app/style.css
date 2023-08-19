@@ -125,6 +125,7 @@ body{
   left: 50%;
   top: -25px;
   transform: translate(-50%);
+  box-shadow: ;
 }
 .dice img {
   position: absolute;
