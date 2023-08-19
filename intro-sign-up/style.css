@@ -110,7 +110,7 @@ svg {
 body {
   font-family: var(--ff-primary);
   height: 100vh;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   background-color: var(--clr-primary-100);
   display: flex;
@@ -160,12 +160,11 @@ body {
    border-radius: 10px;
    box-shadow: 0px 10px 0px hsl(359, 62%, 63%);
 }
-.form > * {
-  padding: var(--size-00);
-}
+
 .form p {     
   font-size: 12px;
 }
+
 /* mobile */
 @media (max-width: 47em) {
   .column1 p {
@@ -201,9 +200,61 @@ body {
 }
 /* error */
 .error {
-  text-align: right;
-  outline: 2px solid red;
+  border: 2px solid red;
 }
+.error::placeholder {
+  text-align: left;
+  color: red;
+}
+.hide {
+  display: none;
+}
+
+.cont {
+  display: grid;
+}
+.cont > * {
+  padding: var(--size-300);
+}
+
+input[type=submit] {
+  padding: var(--size-300);
+}
+
+.input-icons img {
+  position: absolute;
+}
+.input-icons {
+  width: 100%;
+}
+
+/* Error icon and message */
+.error-icon {
+  padding: 0;
+  display: flex;
+  position: relative;
+}
+.error-icon img {
+  position: absolute;
+  right: 1rem;
+  top: -40px;
+}
+.error-message {
+  padding: 0;
+  text-align: right;
+  font-weight: var(--fw-medium);
+  color: red;
+  font-size: 0.65em;
+  font-style: italic;
+  margin-block-start: 10px;
+}
+input.error{
+  text-align: left;
+}
+
+
+
+
 
 /* Utility classes */
 .fw-regular {
@@ -239,3 +290,6 @@ body {
 .fs-300 {
   font-size: var(--size-300);
 }
+
+
+
