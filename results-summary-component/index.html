@@ -1,15 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Results Summary Component</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-
-
+    <main>
+      <div class="container">
+        <div class="column">
+          <h2>Your Result</h2>
+          <div class="circle">
+            <p>76</p>
+            <p>of 100</p>
+          </div>
+          <h1>Great</h1>
+          <p>
+            Your score is higher than 65% of the people who have taken this
+            tests
+          </p>
+        </div>
+        <div class="column">
+          <h3>Summary</h3>
+          <div class="flex">
+            <img src="/images/icon-reaction.svg" alt="">
+            <h4>Reaction</h4>
+            <p>80/100</p>
+          </div>
+          <div class="flex">
+            <img src="/images/icon-memory.svg" alt="">
+            <h4>Memory</h4>
+            <p>92/100</p>
+          </div>
+          <div class="flex">
+            <img src="/images/icon-verbal.svg" alt="">
+            <h4>Verbal</h4>
+            <p>61/100</p>
+          </div>
+          <div class="flex">
+            <img src="/images/icon-visual.svg" alt="">
+            <h4>Visual</h4>
+            <p>72/100</p>
+          </div>
+          <button class="button">Continue</button>
+        </div>
+      </div>
+    </main>
 
     <script type="module" src="/main.js"></script>
   </body>
