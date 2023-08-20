@@ -106,5 +106,32 @@ svg {
 
 /* General styling */
 body {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.flex {
+  display: flex;
+}
+.flex img {
+  outline: 2px solid red;
+}
 
+.column1 {
+  background-color: var(--clr-pale-blue);
+}
+.circle {
+  background-color: hsl(247, 76%, 54%);
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  align-items: center;
 }
