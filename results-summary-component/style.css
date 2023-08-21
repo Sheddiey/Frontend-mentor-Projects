@@ -110,6 +110,7 @@ body {
  justify-content: center;
  align-items: center;
  height: 100vh;
+ font-family: var(--ff-primary);
 }
 .container {
   display: grid;
@@ -123,7 +124,12 @@ body {
 }
 
 .column1 {
-  background-color: var(--clr-pale-blue);
+  background: linear-gradient(to bottom,hsl(250, 98%, 62%)9%,hsl(242, 81%, 55%));
+  text-align: center;
+  padding: 10px;
+}
+.column1 p {
+  max-width: 25ch;
 }
 .circle {
   background-color: hsl(247, 76%, 54%);
@@ -134,4 +140,13 @@ body {
   left: 50%;
   transform: translate(-50%);
   align-items: center;
+}
+
+
+/* utility classes */
+.clr-white {
+  color: var(--clr-white);
+}
+.clr-light-lavender {
+  color: var(--clr-light-lavender);
 }
