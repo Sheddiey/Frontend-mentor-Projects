@@ -188,3 +188,15 @@ body {
 .txt-clr-400 {
   color: var(--clr-cobalt-blue);
 }
+.bg-clr-100{
+  background-color: hsla(0, 100%, 67%, .15);;
+}
+.bg-clr-200 {
+  background-color: hsl(39, 100%, 56%, .15);
+}
+.bg-clr-300 {
+  background-color: hsl(166, 100%, 37%, .15);
+}
+.bg-clr-400 {
+  background-color: hsl(234, 85%, 45%, .15);
+}
