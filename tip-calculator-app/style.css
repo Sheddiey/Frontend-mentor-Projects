@@ -102,7 +102,7 @@ body {
 .logo {
   display: flex;
   justify-content: center;
-  margin-block: var(--size-500);
+  margin-block: var(--size-700);
 }
 .container {
   background-color: var(--white);
@@ -110,6 +110,27 @@ body {
   border-radius: 25px 25px 0px 0px;
   display: grid;
   padding: var(--size-600);
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--size-400);
+  margin-block-start: var(--size-400);
+  margin-block-end: var(--size-600);
+}
+.grid div {
+  padding-block: 8px;
+  font-size: 20px;
+  border-radius: 8px;
+}
+.grid div:not(:last-child) {
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  text-align: center;
+}
+.grid div:last-child {
+  text-align: center;
+  background-color: var(--light-grayish-cyan);
 }
 
 /* input */
@@ -137,4 +158,8 @@ input::placeholder {
 /* utility classes */
 .fw-bold {
   font-weight: var(--fw-bold);
+}
+
+.clr-100 {
+  color: var(--grayish-cyan);
 }
