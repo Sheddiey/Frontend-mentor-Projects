@@ -143,16 +143,31 @@ input {
   background-color: var(--very-light-grayish-cyan);
   color: var(--very-dark-cyan);
   font-size: 24px;
+  width: 100%;
 }
 input::placeholder {
   color: var(--grayish-cyan);
 }
-
-
 .dollar img {
   position: relative;
   top: -31px;
   left: 15px;
+}
+
+/* right-column */
+.right-column {
+  background-color: var(--very-dark-cyan);
+  border-radius: 15px;
+  padding: 20px;
+  margin-block-start: var(--size-500);
+}
+.right-column div:not(:last-child) {
+  margin-block: 12px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* utility classes */
@@ -163,3 +178,7 @@ input::placeholder {
 .clr-100 {
   color: var(--grayish-cyan);
 }
+.clr-200{
+  color: var(--white);
+}
+
