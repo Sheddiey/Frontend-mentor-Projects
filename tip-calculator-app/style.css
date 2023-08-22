@@ -148,6 +148,9 @@ input {
 input::placeholder {
   color: var(--grayish-cyan);
 }
+input:focus{
+  border: 2px solid hsl(173, 31%, 51%);
+}
 .dollar img {
   position: relative;
   top: -31px;
@@ -169,6 +172,25 @@ input::placeholder {
   display: flex;
   justify-content: space-between;
 }
+.total, .amount {
+  color: var(--strong-cyan);
+  font-weight: var(--fw-bold);
+  font-size: 2.2rem;
+}
+/* button */
+.button {
+  border: 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding-block: 10px;
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  font-weight: var(--fw-bold);
+}
+
 
 /* utility classes */
 .fw-bold {
