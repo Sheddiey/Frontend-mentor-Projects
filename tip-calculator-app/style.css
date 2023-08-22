@@ -112,5 +112,29 @@ body {
   padding: var(--size-600);
 }
 
+/* input */
+input {
+  text-align: right;
+  border: 0;
+  padding-inline: var(--size-400);
+  padding-block: var(--size-200);
+  border-radius: 5px;
+  background-color: var(--very-light-grayish-cyan);
+  color: var(--very-dark-cyan);
+  font-size: 24px;
+}
+input::placeholder {
+  color: var(--grayish-cyan);
+}
+
+
+.dollar img {
+  position: relative;
+  top: -31px;
+  left: 15px;
+}
 
 /* utility classes */
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
