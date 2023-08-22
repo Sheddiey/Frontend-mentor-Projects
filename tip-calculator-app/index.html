@@ -1,13 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/images/1.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tip Calculator App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <main>
+      <div class="logo">
+        <img src="/images/logo.svg" alt="" />
+      </div>
+
+      <div class="container">
+        <p>BILL</p>
+        <input id="bill" class="bill" placeholder="0" type="text" />
+        <p>Select Tip %</p>
+        <div class="grid">
+          <div>5%</div>
+          <div>10%</div>
+          <div>15%</div>
+          <div>25%</div>
+          <div>50%</div>
+          <div>Custom</div>
+        </div>
+        <p>Number of People</p>
+        <input placeholder="0" type="text" />
+        <div class="right-column">
+          <div>
+            <p>Tip Amount</p>
+            <p>/ person</p>
+            <p>Total</p>
+            <p>/ person</p>
+          </div>
+          <div>
+            <button class="button" type="reset">Reset</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
