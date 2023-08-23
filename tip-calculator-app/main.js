@@ -1,5 +1,4 @@
 // Dom elements
-const inputs = document.querySelectorAll('input');
 const inputBill = document.querySelector('.bill');
 const inputCustom = document.querySelector('.input-tip');
 const inputPeople = document.querySelector('.number-people');
@@ -75,5 +74,32 @@ percentBtns.forEach((btn) => {
 
 // reset form
 btnReset.addEventListener("click", resetBtn);
+
+// calculate tip and total
+document.querySelectorAll('input').forEach((input) => {
+    input.addEventListener("change", () => {
+        billAmount = Number(inputBill.value);
+        numPeople = Number(inputPeople.value);
+        customPercent = Number(inputCustom.value);
+
+        if (customPercent > 100) {
+            alert("percentage cannot be greater than 100");
+            resetBtn();
+        }
+
+        if (percent === 0) percent = customPercent;
+
+        if (billAmount !==0 && numPeople !==0 && percent !==0) {
+            tipTotal = billAmount * (percent / 100);
+            tipPerson = tipTotal / numPeople;
+            totalPerson = (billAmount + tipTotal) / numPeople;
+
+
+            showTip.textContent = '$' + tipPerson.toFixed(2);
+            showTotal.textContent = '$' + totalPerson.toFixed(2);
+        }
+    });
+});
+
 
 
