@@ -105,6 +105,7 @@ body {
   border-radius: 25px 25px 0px 0px;
   display: grid;
   padding: var(--size-600);
+  width: 800px;
 }
 /* mobile */
 @media (max-width: 47em) {
@@ -132,17 +133,25 @@ body {
   display: grid;
   gap: var(--size-400);
 }
-.grid div {
+.grid button{
   padding-block: 8px;
   font-size: 15px;
-  border-radius: 8px;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
 }
-.grid div:not(:last-child) {
+.percentage-btn:hover,
+.percentage-btn:focus {
+  background-color: hsla(172, 67%, 45%, 0.29) !important;
+  color: var(--very-dark-cyan) !important;
+
+}
+.grid button:not(:last-child) {
   background-color: var(--very-dark-cyan);
   color: var(--white);
   text-align: center;
 }
-.grid div:last-child {
+.grid input:last-child {
   text-align: center;
   background-color: var(--light-grayish-cyan);
 }
@@ -150,6 +159,7 @@ body {
 @media (min-width: 47em) {
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
+    margin-block-end: var(--size-600);
   }
   .container {
     display: grid;
@@ -167,8 +177,7 @@ body {
     position: absolute;
     margin-block-start: var(--size-700);
   }
-  .flex {
-  }
+  
   .right-column {
     display: flex;
     flex-direction: column;
@@ -182,24 +191,31 @@ input {
   text-align: right;
   border: 0;
   padding-inline: var(--size-400);
-  padding-block: var(--size-200);
   border-radius: 5px;
   background-color: var(--very-light-grayish-cyan);
   color: var(--very-dark-cyan);
   font-size: 24px;
   width: 100%;
+  cursor: pointer;
 }
 input::placeholder {
   color: var(--grayish-cyan);
 }
 input:focus{
+  outline: none;
   border: 2px solid hsl(173, 31%, 51%);
 }
 .dollar img {
   position: relative;
-  top: -31px;
+  top: -28px;
   left: 15px;
 }
+
+.input-tip {
+  background-color: var(--very-light-grayish-cyan);
+}
+
+
 
 /* right-column */
 .right-column {
@@ -216,9 +232,9 @@ input:focus{
   display: flex;
   justify-content: space-between;
 }
-.flex p {
+/* .flex p {
   font-size: 12px;
-}
+} */
 
 .total, .amount {
   color: var(--strong-cyan);
@@ -233,12 +249,15 @@ input:focus{
   font-size: 20px;
   border-radius: 5px;
   cursor: pointer;
-  padding-block: 10px;
+  padding-block: 5px;
   background-color: var(--strong-cyan);
   color: var(--very-dark-cyan);
   font-weight: var(--fw-bold);
 }
-
+.button:hover,
+.button:focus {
+  background-color: hsl(173, 61%, 77%);
+}
 
 /* utility classes */
 .fw-bold {
@@ -252,3 +271,12 @@ input:focus{
   color: var(--white);
 }
 
+.fs-100 {
+  font-size: 12px;
+}
+.fs-200 {
+  font-size: 16px;
+}
+.margin-block {
+  margin-block: 10px;
+}
