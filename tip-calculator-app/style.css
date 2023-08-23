@@ -140,7 +140,7 @@ body {
   border: 0;
   cursor: pointer;
 }
-.percentage-btn:hover,
+.percentage-btn.click,
 .percentage-btn:focus {
   background-color: hsl(172, 67%, 45%) !important;
   color: var(--very-dark-cyan) !important;
@@ -205,6 +205,9 @@ input:focus{
   outline: none;
   border: 2px solid hsl(173, 31%, 51%);
 }
+.border-error {
+  border: 2px solid hsl(0, 85%, 51%);
+}
 .dollar img {
   position: relative;
   top: -28px;
@@ -267,7 +270,7 @@ input:focus{
   justify-content: space-between;
 }
 .error, .error1{
-  color: hsl(13, 39%, 59%);
+  color: hsl(0, 85%, 51%);
 }
 .hidden, .hidden1 {
   display: none;
@@ -296,4 +299,7 @@ input:focus{
 }
 .margin-block-end {
   margin-block-end: 5px;
+}
+.percentage-btn.click {
+
 }

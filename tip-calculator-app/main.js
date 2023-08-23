@@ -41,8 +41,10 @@ inputBill.addEventListener('change', () => {
 
         if(inputValue1 === 0) {
             errorMessage.classList.remove('hidden')
+            inputBill.classList.add('border-error')
         } else {
             errorMessage.classList.add('hidden')
+            inputBill.classList.remove('border-error')
         }
     });
 
@@ -51,8 +53,10 @@ inputBill.addEventListener('change', () => {
 
         if(inputValue2 === 0) {
             errorMessage1.classList.remove('hidden1')
+            inputPeople.classList.add('border-error')
         } else {
             errorMessage1.classList.add('hidden1')
+            inputPeople.classList.remove('border-error')
         }
     });
 
