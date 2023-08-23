@@ -73,4 +73,7 @@ percentBtns.forEach((btn) => {
  });
 });
 
+// reset form
+btnReset.addEventListener("click", resetBtn);
+
 
