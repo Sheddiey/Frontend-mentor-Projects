@@ -142,7 +142,7 @@ body {
 }
 .percentage-btn:hover,
 .percentage-btn:focus {
-  background-color: hsla(172, 67%, 45%, 0.29) !important;
+  background-color: hsl(172, 67%, 45%) !important;
   color: var(--very-dark-cyan) !important;
 
 }
@@ -224,7 +224,7 @@ input:focus{
   padding: 20px;
 }
 .right-column div:not(:last-child) {
-  margin-block-end: 12px;
+  margin-block-end: 20px;
 }
 
 
@@ -258,6 +258,17 @@ input:focus{
 .button:focus {
   background-color: hsl(173, 61%, 77%);
 }
+/* error */
+.error-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.error{
+  color: hsl(13, 39%, 59%);
+}
+.hidden {
+  display: none;
+}
 
 /* utility classes */
 .fw-bold {
@@ -279,4 +290,7 @@ input:focus{
 }
 .margin-block {
   margin-block: 10px;
+}
+.margin-block-end {
+  margin-block-end: 5px;
 }
