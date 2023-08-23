@@ -99,28 +99,42 @@ body {
   display: flex;
 }
 /* General styling */
-.logo {
-  display: flex;
-  justify-content: center;
-  margin-block: var(--size-700);
-}
+
 .container {
   background-color: var(--white);
-  width: 100vw;
   border-radius: 25px 25px 0px 0px;
   display: grid;
   padding: var(--size-600);
 }
+/* mobile */
+@media (max-width: 47em) {
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-block: var(--size-700);
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    margin-block-start: var(--size-400);
+    margin-block-end: var(--size-600);  
+  }
+  .container {
+    width: 100vw;
+  }
+  .right-column {
+    margin-block-start: var(--size-500);
+  }
+  .right-column div:not(:last-child) {
+    margin-block: 12px;
+  }
+}
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: var(--size-400);
-  margin-block-start: var(--size-400);
-  margin-block-end: var(--size-600);
 }
 .grid div {
   padding-block: 8px;
-  font-size: 20px;
+  font-size: 15px;
   border-radius: 8px;
 }
 .grid div:not(:last-child) {
@@ -132,6 +146,36 @@ body {
   text-align: center;
   background-color: var(--light-grayish-cyan);
 }
+/* Desktop */
+@media (min-width: 47em) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--size-600);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+  }
+  .logo img {
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    margin-block-start: var(--size-700);
+  }
+  .flex {
+  }
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
 
 /* input */
 input {
@@ -162,20 +206,24 @@ input:focus{
   background-color: var(--very-dark-cyan);
   border-radius: 15px;
   padding: 20px;
-  margin-block-start: var(--size-500);
 }
 .right-column div:not(:last-child) {
-  margin-block: 12px;
+  margin-block-end: 12px;
 }
+
 
 .flex {
   display: flex;
   justify-content: space-between;
 }
+.flex p {
+  font-size: 12px;
+}
+
 .total, .amount {
   color: var(--strong-cyan);
   font-weight: var(--fw-bold);
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 /* button */
 .button {
