@@ -1,33 +1,29 @@
 const inputs = document.querySelectorAll('input:not([name="custom"])');
 const errorMessage = document.querySelector('.error');
+const errorMessage1 = document.querySelector('.error1');
 
 const bill = document.querySelector('.bill');
 const inputTipPerc = document.querySelector('.input-tip');
-const numberOfPeople = document.querySelector('number-people');
+const numberOfPeople = document.querySelector('.number-people');
 
+    bill.addEventListener('input', () => {
+        const inputValue1 = parseFloat(bill.value);
 
-inputs.forEach(input => {
-    input.addEventListener('invalid', addErrorMessage);
-
-    input.addEventListener('blur', (event) => {
-        if(!input.checkValidity()) {
-            addErrorMessage();
-        }
-        else {
-            removeErrorMessage();
+        if(inputValue1 === 0) {
+            errorMessage.classList.remove('hidden')
+        } else {
+            errorMessage.classList.add('hidden')
         }
     });
 
-    input.addEventListener('focus', removeErrorMessage);
-});
-console.log(inputs)
+    numberOfPeople.addEventListener('input', () => {
+        const inputValue2 = parseFloat(numberOfPeople.value)
 
-// functions to add and remove errors
-function addErrorMessage () {
-    errorMessage.classList.remove('hidden');
-};
+        if(inputValue2 === 0) {
+            errorMessage1.classList.remove('hidden1')
+        } else {
+            errorMessage1.classList.add('hidden1')
+        }
+    });
 
-function removeErrorMessage () {
-    errorMessage.classList.add('hidden')
-};
 

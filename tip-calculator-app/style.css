@@ -263,10 +263,10 @@ input:focus{
   display: flex;
   justify-content: space-between;
 }
-.error{
+.error, .error1{
   color: hsl(13, 39%, 59%);
 }
-.hidden {
+.hidden, .hidden1 {
   display: none;
 }
 

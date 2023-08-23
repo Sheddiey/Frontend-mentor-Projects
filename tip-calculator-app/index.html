@@ -22,28 +22,49 @@
       <div class="container">
         <div class="left-column">
           <div class="error-flex">
-          <p class="clr-100">BILL</p>
-          <p class="error hidden | fs-100">Can't be zero</p>
-        </div>
+            <p class="clr-100">BILL</p>
+            <p id="error" class="error hidden | fs-100">Can't be zero</p>
+          </div>
           <div class="dollar">
-            <input id="bill" class="bill" placeholder="0" min="0" type="number" />
+            <input
+              id="bill"
+              class="bill"
+              placeholder="0"
+              min="0"
+              maxlength="7"
+              type="number"
+              required
+            />
             <img src="/images/icon-dollar.svg" alt="" />
           </div>
           <p class="clr-100 fs-100 margin-block">Select Tip %</p>
           <div class="grid | fw-bold">
-            <button class="percentage-btn">5%</button> 
+            <button class="percentage-btn">5%</button>
             <button class="percentage-btn">10%</button>
             <button class="percentage-btn">15%</button>
             <button class="percentage-btn">25%</button>
             <button class="percentage-btn">50%</button>
-            <input min="0" type="number" name="custom" class="input-tip | fs-200" placeholder="Custom">
+            <input
+              min="0"
+              type="number"
+              name="custom"
+              class="input-tip | fs-200"
+              placeholder="Custom"
+              required
+            />
           </div>
           <div class="error-flex margin-block-end">
-          <p class="clr-100 fs-100">Number of People</p>
-          <p class="error hidden | fs-100">Can't be zero</p>
-        </div>
+            <p class="clr-100 fs-100">Number of People</p>
+            <p id="error" class="error1 hidden1 | fs-100">Can't be zero</p>
+          </div>
           <div class="people dollar">
-            <input class="number-people" placeholder="0" min="0" type="number" />
+            <input
+              class="number-people"
+              placeholder="0"
+              min="0"
+              type="number"
+              required
+            />
             <img src="/images/icon-person.svg" alt="" />
           </div>
         </div>
