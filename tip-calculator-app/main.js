@@ -14,7 +14,19 @@ const showTotal = document.querySelector('.show-total');
 const errorMessage = document.querySelector('.error');
 const errorMessage1 = document.querySelector('.error1');
 
+let billAmount, numPeople, customPercent, tipTotal, tipPerson, totalPerson;
 
+// functions
+// reset function
+function resetBtn () {
+ inputBill.value = " ";
+ inputPeople.value = " ";
+ inputCustom.value = " ";
+ showTip.textContent = "$0.00"
+ showTotal.textContent = "$0.00"
+};
+
+// Activate reset button
 
     inputBill.addEventListener('input', () => {
         const inputValue1 = parseFloat(inputBill.value);
