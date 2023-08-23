@@ -36,6 +36,7 @@ inputBill.addEventListener('change', () => {
     }
 });
 
+// error section
     inputBill.addEventListener('input', () => {
         const inputValue1 = parseFloat(inputBill.value);
 
@@ -55,5 +56,21 @@ inputBill.addEventListener('change', () => {
             errorMessage1.classList.add('hidden1')
         }
     });
+
+
+// select tip
+const percentBtns = [btn_5, btn_10, btn_15, btn_25, btn_50, inputCustom]
+let percent = 0;
+
+percentBtns.forEach((btn) => {
+ btn.addEventListener("pointerdown", (e) => {
+   btn.classList.add("click");
+   percentBtns.forEach((btnInner) => {
+    if(btnInner !==btn) btnInner.classList.remove("click");
+   });
+
+   if (btn.id !==custom) percent = Number(btn.innerHTML);
+ });
+});
 
 
