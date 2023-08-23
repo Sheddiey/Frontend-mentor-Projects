@@ -258,6 +258,9 @@ input:focus{
 .button:focus {
   background-color: hsl(173, 61%, 77%);
 }
+.button:disabled {
+  background-color: hsl(183, 79%, 24%);
+}
 /* error */
 .error-flex {
   display: flex;
