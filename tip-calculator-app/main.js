@@ -27,6 +27,14 @@ function resetBtn () {
 };
 
 // Activate reset button
+inputBill.addEventListener('change', () => {
+    billAmount = Number(inputBill.value);
+    numPeople = Number(inputPeople.value);
+
+    if (billAmount !==0 ){
+       btnReset.removeAttribute("disabled")
+    }
+});
 
     inputBill.addEventListener('input', () => {
         const inputValue1 = parseFloat(inputBill.value);
@@ -38,8 +46,8 @@ function resetBtn () {
         }
     });
 
-    inputPeoplePeople.addEventListener('input', () => {
-        const inputValue2 = parseFloat(inputPeoplePeople.value)
+    inputPeople.addEventListener('input', () => {
+        const inputValue2 = parseFloat(inputPeople.value)
 
         if(inputValue2 === 0) {
             errorMessage1.classList.remove('hidden1')
