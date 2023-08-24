@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
@@ -6,7 +7,7 @@ function Navbar() {
     <nav className='navbar'>
         <div className='navbar-container'>
             <link to="/" className='navbar-logo'>
-                TRVL
+               TRVL   //icon
             </link>
         </div>
 
