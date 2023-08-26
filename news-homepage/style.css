@@ -175,6 +175,7 @@ body{
 
 /* navigation */
 .nav-container{
+  outline: 2px solid red;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -262,9 +263,9 @@ body{
 
   .mobile-nav-toggle{
     display: block;
-    position: fixed;
-    top: var(--size-700);
-    right: var(--size-450);
+    position: absolut;
+    top: var(--size-00);
+    right: var(--size-0);
     z-index: 100; 
     cursor: pointer;
     background: transparent;
@@ -272,6 +273,8 @@ body{
     padding: 0.5rem;
     width: 2rem;
     aspect-ratio: 1;
+    outline: 2px solid red;
+    justify-content: right;
 
     background-image: url(/images/icon-menu.svg);
     background-size: contain;
