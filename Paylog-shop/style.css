@@ -1,9 +1,12 @@
 :root {
   --clr-primary-100: hsl(228, 43%, 9%);
   --clr-primary-200: hsl(231, 29%, 14%);
+  --clr-primary-300: hsl(228, 43%, 9%);
 
   --clr-accent-100: hsl(211, 100%, 70%);
-  --clr-accent-button-100: hsl(218, 100%, 63%);
+  --clr-accent-button-100: hsl(211, 100%, 70%);
+  --clr-accent-button-hover-100: hsl(218, 100%, 63%);
+  --clr-accent-link-100: hsl(203, 65%, 64%);
 
   --size-100: 0.25rem;
   --size-200: 0.5rem;
@@ -85,4 +88,92 @@ svg {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* general styling */
+body {
+  background-color: var(--clr-primary-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--clr-primary-200);
+  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.3), -12px -12px 24px rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 10px;
+}
+/* form */
+.form {
+  display: grid;
+  gap: var(--size-450);
+}
+
+input[type="email"],
+input[type="password"] {
+  font-size: var(--size-300);
+  width: 100%;
+  border: 1px solid var(--clr-accent-100);
+  color: #fff;
+  background-color: var(--clr-primary-300);
+  border-radius: 5px;
+  padding-inline: 10px;
+  padding-block: 5px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.05);;
+}
+@media (min-width: 47em) {
+  
+}
+
+/* button */
+.button {
+  border: 0;
+  background-color: var(--clr-accent-button-100);
+  color: #fff;
+  border-radius: 5px;
+  padding-inline: 20px;
+  padding-block: 5px;
+  margin-block-start: 20px;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-4px);
+  background-color: var(--clr-accent-button-hover-100);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4), -8px -8px 16px rgba(255, 255, 255, 0.1);
+}
+
+
+/* signup-link */
+.signup-link {
+  text-decoration: none;
+  color: var(--clr-accent-link-100);
+  margin-block-start: 10px;
+  margin-block-end: var(--size-500);
+}
+
+/* utility classes */
+.clr-100{
+  color: var(--clr-accent-100);
+}
+.clr-200{
+  color: var(--clr-accent-button-100);
+ }
+
+ .fs-100 {
+  font-size: 64px;
+ }
+ .fs-200 {
+  font-size: 36px;
+ }
+ .fw-100 {
+  font-weight: bold;
+ }
+
+.margin-block-end {
+  margin-block-end: 10px;
 }
