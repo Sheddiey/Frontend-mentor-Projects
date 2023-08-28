@@ -1,5 +1,9 @@
 :root {
-  
+  --clr-primary-100: hsl(228, 43%, 9%);
+  --clr-primary-200: hsl(231, 29%, 14%);
+
+  --clr-accent-100: hsl(211, 100%, 70%);
+  --clr-accent-button-100: hsl(218, 100%, 63%);
 
   --size-100: 0.25rem;
   --size-200: 0.5rem;
