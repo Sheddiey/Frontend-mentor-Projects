@@ -151,6 +151,11 @@ input[type="password"] {
   input[type="password"] {
     width: 500px;
 }
+.register-cont
+input[type="email"],
+input[type="password"]{
+  width: 650px;
+}
 }
 
 
@@ -159,13 +164,13 @@ input[type="password"] {
   text-decoration: none;
   color: var(--clr-accent-link-100);
   margin-block-start: 10px;
-  margin-block-end: var(--size-500);
 }
 
 /* Register page */
 .hide {
   display: none;
 }
+
 
 
 /* utility classes */
