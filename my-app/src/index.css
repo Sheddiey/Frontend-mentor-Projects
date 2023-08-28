@@ -55,7 +55,7 @@ ul {
   width: 34px;
 }
 
-.border-row:after {
+.board-row:after {
   clear: both;
   content: ' ';
   display: table;
