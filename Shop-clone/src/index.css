@@ -1,1 +1,194 @@
-
+:root {
+    --clr-primary-100: hsl(228, 43%, 9%);
+    --clr-primary-200: hsl(231, 29%, 14%);
+    --clr-primary-300: hsl(228, 43%, 9%);
+  
+    --clr-accent-100: hsl(211, 100%, 70%);
+    --clr-accent-button-100: hsl(211, 100%, 70%);
+    --clr-accent-button-hover-100: hsl(218, 100%, 63%);
+    --clr-accent-link-100: hsl(203, 65%, 64%);
+  
+    --size-100: 0.25rem;
+    --size-200: 0.5rem;
+    --size-300: 0.75rem;
+    --size-400: 1rem;
+    --size-450: 1.2rem;
+    --size-500: 1.5rem;
+    --size-550: 1.875rem;
+    --size-600: 2rem;
+    --size-700: 3rem;
+    --size-800: 4rem;
+    --size-900: 5rem;
+  
+  }
+  
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Remove default margin */
+  *{
+    margin: 0;
+    padding: 0;
+    font: inherit;
+  }
+  
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role='list'],
+  ol[role='list'] {
+    list-style: none;
+  }
+  
+  /* Set core root defaults */
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  
+  html,
+  body{
+      min-height: 100%;
+      overflow-x: hidden;
+  }
+  /* Set core body defaults */
+  body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  }
+  
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  
+  /* Make images easier to work with */
+  img,
+  picture,
+  svg {
+    max-width: 100%;
+    display: block;
+  }
+  
+  
+  
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* general styling */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--clr-primary-100);
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--clr-primary-200);
+    box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.3), -12px -12px 24px rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+  }
+  /* form */
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--size-450);
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    border: 1px solid var(--clr-accent-100);
+    color: #fff;
+    background-color: var(--clr-primary-300);
+    border-radius: 5px;
+    padding-inline: 10px;
+    padding-block: 5px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.05);;
+  }
+  .login-btn,
+  .register-btn {
+    border: 0;
+    background-color: var(--clr-accent-button-100);
+    color: #fff;
+    border-radius: 5px;
+    padding-inline: 20px;
+    padding-block: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 10px;
+  
+  }
+  .login-btn:hover,
+  .register-btn:hover {
+    transform: translateY(-4px);
+    background-color: var(--clr-accent-button-hover-100);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4), -8px -8px 16px rgba(255, 255, 255, 0.1);
+  }
+  
+  @media (min-width: 47em) {
+    input[type="email"],
+    input[type="password"] {
+      width: 500px;
+  }
+  }
+  
+  
+  /* signup-link */
+  .signup-link,
+  .signin-link {
+    text-decoration: none;
+    color: var(--clr-accent-link-100);
+    margin-block-start: 10px;
+  }
+  
+  /* Register page */
+  .hide {
+    display: none;
+  }
+  
+  
+  
+  /* utility classes */
+  .clr-100{
+    color: var(--clr-accent-100);
+  }
+  .clr-200{
+    color: var(--clr-accent-button-100);
+   }
+  
+   .fs-100 {
+    font-size: 64px;
+   }
+   .fs-200 {
+    font-size: 36px;
+   }
+   .fw-100 {
+    font-weight: bold;
+   }
+  
+  .margin-block-end {
+    margin-block-end: 10px;
+  }

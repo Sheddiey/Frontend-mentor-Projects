@@ -1,7 +1,10 @@
 import './App.css';
+import LoginPage from './components/LoginPage';
 
- function App() {
-  return <h1>yooo</h1>
+ export default function App() {
+  return (
+    <>
+      <LoginPage />
+    </>
+  );
 }
-
-export default App;
