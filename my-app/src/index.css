@@ -73,6 +73,7 @@ ul {
 .game-info {
   margin-left: 20px;
 }
-button {
+
+.btn {
   aspect-ratio: 1;
 }
