@@ -1,29 +1,28 @@
-function Item({ name, isPacked }) {
-  return (
-    <li className="item">
-      {name} {isPacked && '✔'}
-    </li>
-  );
-}
+import { people } from "./data";
+import { getImageUrl } from "./utils";
+import "./App.css"
 
-export default function PackingList() {
-  return(
-    <section>
-      <h1>Sally rides Packing LIst</h1>
-      <ul>
-        <Item
-          isPacked={true}
-          name="Space suit" 
+
+
+export default function Lists() {
+  const listItems = people.map(person => 
+      <li key={person.id}>
+        <img
+          className="avatar"
+          src={getImageUrl(person)}
+          alt={person.name}
         />
-        <Item
-          isPacked={true}
-          name="Helmet with a golden leaf"
-        />
-        <Item
-          isPacked={false}
-          name="Photo of Tam"
-        />
-      </ul>
-    </section>
-  );
+        <p>
+          <b>{person.name}:</b>
+          {' ' + person.profession + ' '}
+          known foor {person.accomplishment}
+        </p>
+      </li>
+    );
+    return (
+        <article>
+          <h1>Scientists</h1>
+          <ul>{listItems}</ul>
+        </article>
+      );
 }
