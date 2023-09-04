@@ -1,28 +1,17 @@
-import { people } from "./data";
-import { getImageUrl } from "./utils";
-import "./App.css"
+let guest = 0;
 
+function Cup () {
+  //bad: changing a pre existing variable
+  guest = guest + 1;
+  return <h2>Tea cup for guest #{guest}</h2>
+}
 
-
-export default function Lists() {
-  const listItems = people.map(person => 
-      <li key={person.id}>
-        <img
-          className="avatar"
-          src={getImageUrl(person)}
-          alt={person.name}
-        />
-        <p>
-          <b>{person.name}:</b>
-          {' ' + person.profession + ' '}
-          known foor {person.accomplishment}
-        </p>
-      </li>
-    );
-    return (
-        <article>
-          <h1>Scientists</h1>
-          <ul>{listItems}</ul>
-        </article>
-      );
+export default function TeaSet() {
+  return (
+    <>
+      <Cup />
+      <Cup />
+      <Cup />
+    </>
+  );
 }
