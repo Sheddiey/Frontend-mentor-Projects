@@ -1,11 +1,17 @@
-function Cup({ guest })  {
-  return <h2>Tea cup for guest #{guest}</h2>
-}
+import "./App.css"
 
-export default function TeaGathering() {
-  let cups = [];
-  for (let i = 1; i <= 102; i++) {
-    cups.push(<Cup key={i} guest={i} />)
+
+export default function Clock({ time }) {
+  let hours = time.getHours();
+  let className;
+  if (hours >= 0 && hours <= 9) {
+    className = 'night';
+  } else {
+    className = 'day';
   }
-  return cups;
+  return (
+    <h1 className={className}>
+      {time.toLocaleTimeString()}kk
+    </h1>
+  );
 }

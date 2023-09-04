@@ -1,27 +1,11 @@
-.avatar {
-  border-radius: 50%;
+
+
+.night{
+  background-color: black;
+  color: white;
 }
 
-article > * >*{
-  display: flex;
-  gap: 240px;
-}
-img{
-  margin-bottom: 10px;
-}
-p{
-  display: grid;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-}
-
-article{
-  width: 700px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.day {
+  background-color: yellow;
+  color: black;
 }
