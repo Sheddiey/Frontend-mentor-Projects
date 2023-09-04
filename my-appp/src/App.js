@@ -1,23 +1,11 @@
-function Recipe ({ drinkers }) {
-  return (
-    <ol>
-      <li>Boil {drinkers} cups of water</li>
-      <li>Add {drinkers} spoons of tea and {0.5 * drinkers} spoons of spice</li>
-      <li>Add {0.5 * drinkers} cup of milk to boil and sugar to taste</li>
-    </ol>
-  );
+function Cup({ guest })  {
+  return <h2>Tea cup for guest #{guest}</h2>
 }
 
-export default function App() {
-  return (
-    <section>
-      <h1>Spiced Chai recipe</h1>
-      <h2>For two</h2>
-      <Recipe drinkers={2} />
-      <h2>For a gathering</h2>
-      <Recipe drinkers={4} />
-      <h2>For a Ruracio</h2>
-      <Recipe drinkers={10} />
-    </section>
-  );
+export default function TeaGathering() {
+  let cups = [];
+  for (let i = 1; i <= 102; i++) {
+    cups.push(<Cup key={i} guest={i} />)
+  }
+  return cups;
 }
