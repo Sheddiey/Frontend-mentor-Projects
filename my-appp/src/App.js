@@ -1,17 +1,16 @@
-import "./App.css"
+import Profile from "./Profile";
 
-
-export default function Clock({ time }) {
-  let hours = time.getHours();
-  let className;
-  if (hours >= 0 && hours <= 9) {
-    className = 'night';
-  } else {
-    className = 'day';
-  }
+export default function App() {
   return (
-    <h1 className={className}>
-      {time.toLocaleTimeString()}kk
-    </h1>
-  );
+    <>
+      <Profile person={{
+        imageId: 'lrWQx8l',
+        name: 'Subrahmanyan Chandrasekhar',
+      }} />
+      <Profile person={{
+        imageId: 'MK3eW3A',
+        name: 'Creola Katherine Johnson',
+      }}/>
+    </>
+  )
 }
