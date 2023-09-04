@@ -1,12 +1,23 @@
-function AlertButton({ children, message }) {
-  return <button onClick={() => alert(message)}>{children}</button>;
+function Button({ onClick, children }) {
+  return <button onClick={onClick}>{children}</button>;
 }
 
-export default function Toolbar() {
+function PlayButton({ movieName }) {
+  function handlePlayClick() {
+    alert(`Playing ${movieName}!`);
+  }
+  return <Button onClick={handlePlayClick}>Play "{movieName}"</Button>;
+}
+
+function UploadButton() {
+  return <Button onClick={() => alert("Uploading!")}>Upload Image</Button>;
+}
+
+export default function ToolBar() {
   return (
-    <div>
-      <AlertButton message="playing!">Play Movie</AlertButton>
-      <AlertButton message="uploading!">Upload image</AlertButton>
-      </div>
+    <>
+      <PlayButton movieName="The prince that was never crowned king" />
+      <UploadButton />
+    </>
   );
 }
