@@ -1,16 +1,11 @@
-import Profile from "./Profile";
+export default function Button() {
+  function handleClick() {
+    alert ("You clicked me!")
+  }
 
-export default function App() {
   return (
-    <>
-      <Profile person={{
-        imageId: 'lrWQx8l',
-        name: 'Subrahmanyan Chandrasekhar',
-      }} />
-      <Profile person={{
-        imageId: 'MK3eW3A',
-        name: 'Creola Katherine Johnson',
-      }}/>
-    </>
-  )
+    <button onClick={handleClick}>
+      Click me
+    </button>
+  );
 }
