@@ -65,3 +65,10 @@ h1 { margin: 5px; font-size: 18px; }
   margin-inline-start: 30px;
   padding: 10px;
 }
+.pagee {
+  display: grid;
+  gap: 10px;
+}
+.pagee button {
+  width: max-content;
+}
