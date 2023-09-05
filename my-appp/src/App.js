@@ -1,23 +1,29 @@
-function Button({ onClick, children }) {
-  return <button onClick={onClick}>{children}</button>;
+export default  function App() {
+  return (
+    <Toolbar 
+      onPlayMovie={() => alert("Playing!")}
+      onUploadImage={() => alert("Uploading image")}
+    />
+  );
 }
 
-function PlayButton({ movieName }) {
-  function handlePlayClick() {
-    alert(`Playing ${movieName}!`);
-  }
-  return <Button onClick={handlePlayClick}>Play "{movieName}"</Button>;
-}
-
-function UploadButton() {
-  return <Button onClick={() => alert("Uploading!")}>Upload Image</Button>;
-}
-
-export default function ToolBar() {
+function Toolbar({onPlayMovie, onUploadImage}) {
   return (
     <>
-      <PlayButton movieName="The prince that was never crowned king" />
-      <UploadButton />
+      <Button onClick={onPlayMovie}>
+        Play movie
+      </Button>
+      <Button onClick={onUploadImage}>
+        Upload image
+      </Button>
     </>
+  );
+}
+
+function Button({ onClick, children }) {
+  return (
+    <button onClick={onClick}>
+      {children}
+    </button>
   );
 }
