@@ -27,7 +27,18 @@
 
   --fw-regular: 400;
   --fw-bold: 700;
-
+  
+  --size-100: 0.25rem;
+  --size-200: 0.5rem;
+  --size-300: 0.75rem;
+  --size-400: 1rem;
+  --size-450: 1.2rem;
+  --size-500: 1.5rem;
+  --size-550: 1.875rem;
+  --size-600: 2rem;
+  --size-700: 3rem;
+  --size-800: 4rem;
+  --size-900: 5rem;
 }
 
 /* Box sizing rules */
@@ -98,4 +109,66 @@ svg {
   }
 }
 
+/* general styling */
+body{
+  font-family: var(--ff-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Card */
+.card {
+  outline: 2px solid black;
+  text-align: center;
+}
+.card h1 {
+  font-weight: var(--fw-bold);
+}
+.card h4 {
+  text-transform: uppercase;
+}
+.section1 {
+  display: flex;
+  gap: 20px;
+}
+.icon-up,
+.icon-down {
+  width: 10px;
+  height: 10px;
+}
+/* nav-bar */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
+/* section3 grid-4 */
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+.card-section-2 {
+  outline: 2px solid black;
+  margin: 20px;
+}
 
+/* utility classes */
+.flex {
+  display: flex;
+}
+.fs-100 { font-size: ;}
+.fs-200 { font-size: ;}
+.fs-300 { font-size: ;}
+.fs-400 { font-size: ;}
+.fs-500 { font-size: ;}
+.fs-600 { font-size: ;}
+.fs-700 { font-size: ;}
+.fs-800 { font-size: ;}
+.fs-900 { font-size: ;}
+
+.fw-100{ font-weight: var(--fw-bold); }
+.fw-200{ font-weight: var(--fw-regular); }
