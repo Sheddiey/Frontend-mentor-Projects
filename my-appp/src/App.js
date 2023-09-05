@@ -1,31 +1,32 @@
-import { useState } from "react";
-import ColorSwitch from "./ColorSwitch";
+import { sculptureList } from "./data";
 
-export default function App() {
-  const [clicks, setClicks] = useState(0);
+export default function Gallery() {
+  let index = 0;
 
-  function handleClickOutside() {
-    setClicks(c => c + 1);
+  function handleClick() {
+    index = index + 1;
   }
 
-  function getRandomLightColor() {
-    let r = 150 + Math.round(100 * Math.random());
-    let g = 150 + Math.round(100 * Math.random());
-    let b = 150 + Math.round(100 * Math.random());
-    return `rgb(${r}, ${g}, ${b})`;
-  }
-
-  function handleChangeColor() {
-    let bodyStyle = document.body.style;
-    bodyStyle.backgroundColor = getRandomLightColor();
-  }
-
+  let sculpture = sculptureList[index];
   return (
-    <div style={{ width: '100%', height: '100%'}} onClick={handleClickOutside}>
-      <ColorSwitch onChangeColor={handleChangeColor} />
-      <br />
-      <br />
-      <h2>Clicks on the page: {clicks}</h2>
-    </div>
+    <>
+      <button onClick={handleClick}>
+        Next
+      </button>
+      <h2>
+        <i>{sculpture.name} </i>
+        by {sculpture.artist}
+      </h2>
+      <h3>
+        ({index + 1} of {sculptureList.length})
+      </h3>
+      <img 
+        src={sculpture.url}
+        alt={sculpture.alt}
+      />
+      <p>
+        {sculpture.de}
+      </p>
+    </>
   );
 }
