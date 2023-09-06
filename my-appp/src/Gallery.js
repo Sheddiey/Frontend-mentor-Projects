@@ -1,50 +1,31 @@
 import { useState } from "react";
-import { sculptureList } from "./data";
 
-export default function Gallery() {
-  const [index, setIndex] = useState(0);
-  const [showMore, setShowMore] = useState(false);
+export default function Form() {
+  const [isSent, setIsSent] = useState(false);
+  const [message, setMessage] = useState("Hi!");
 
-  let hasPrev = index > 0;
-  let hasNext = index < sculptureList.length - 1;
-
-  function handlePrevClick() {
-    if (hasPrev) {
-      setIndex(index - 1);
-    }
+  if (isSent) {
+    return <h1>Your message is on its way!</h1>;
   }
 
-  function handleNextClick() {
-    if (hasNext) {
-      setIndex(index + 1);
-    }
-  }
-
-  function handleMoreClick() {
-    setShowMore(!showMore);
-  }
-
-  let sculpture = sculptureList[index];
   return (
-    <div className="pagee">
-      <button onClick={handlePrevClick} disabled={!hasPrev}>
-        Previous
-      </button>
-      <button onClick={handleNextClick} disabled={!hasNext}>
-        Next
-      </button>
-      <h2>
-        <i>{sculpture.name} </i>
-        by {sculpture.artist}
-      </h2>
-      <h3>
-        ({index + 1} of {sculptureList.length})
-      </h3>
-      <button onClick={handleMoreClick}>
-        {showMore ? "hide" : "show"} details
-      </button>
-      {showMore && <p>{sculpture.description}</p>}
-      <img src={sculpture.url} alt={sculpture.alt} />
-    </div>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        setIsSent(true);
+        sendMessage(message);
+      }}
+    >
+      <textarea
+        placeholder="Message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+      />
+      <button type="submit">Send</button>
+    </form>
   );
+}
+
+function sendMessage(message) {
+  //..
 }
