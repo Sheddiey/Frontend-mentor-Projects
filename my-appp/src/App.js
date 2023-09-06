@@ -8,8 +8,9 @@ export default function Counter() {
       <h1>{number}</h1>
       <button
         onClick={() => {
-          setNumber(number + 5);
-          setNumber((n) => n + 1);
+          setNumber(number + 5); //5 +0
+          setNumber((n) => n + 1); //5 + 1
+          setNumber(42); //6 is unused
         }}
       >
         Increase the number
