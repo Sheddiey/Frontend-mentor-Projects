@@ -7,48 +7,38 @@ export default function Form() {
     email: 'nellise@gmail.com'
   });
 
-  function handleFirstNameChange(e) {
+  function handleChange(e) {
     setPerson({
       ...person, //copy the old field
-      firstName: e.target.value
+      [e.target.name]: e.target.value
     })
   }
 
-  function handleLastNameChange(e) {
-    setPerson({
-      ...person,
-      lastName: e.target.value
-    })
-  }
-
-  function handleEmailChange(e) {
-    setPerson({
-      ...person,
-      email: e.target.value
-    })
-  }
 
   return (
     <>
       <label>
         First name: 
-          <input 
+          <input
+            name="firstName" 
             value={person.firstName}
-            onChange={handleFirstNameChange}
+            onChange={handleChange}
           />
       </label>
       <label>
           Last name:
           <input 
+            name="lastName"
             value={person.lastName}
-            onChange={handleLastNameChange}
+            onChange={handleChange}
           />
       </label>
       <label>
         Email:
-        <input 
+        <input
+          name="email" 
           value={person.email}
-          onChange={handleEmailChange}
+          onChange={handleChange}
         />
       </label>
       <p>
