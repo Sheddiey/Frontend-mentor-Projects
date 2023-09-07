@@ -1,27 +1,36 @@
 import { useState } from "react";
 
-export default function RequestTracker() {
-  const [pending, setPending] = useState(0);
-  const [completed, setcompleted] = useState(0);
-
-  async function handleClick() {
-    setPending(p => p + 1);
-    await delay(3000);
-    setPending(p => p - 1);
-    setcompleted(c => c + 1)
-  }
-
-  return (
-    <>
-      <h3>Pending: {pending}</h3>
-      <h3>Completed: {completed}</h3>
-      <button onClick={handleClick}>Buy</button>
-    </>
-  );
-}
-
-function delay(ms) {
-  return new Promise(resolve => {
-    setTimeout(resolve, ms);
+export default function MovingDot() {
+  const [position, setPosition] = useState({
+    X: 0,
+    y: 0,
   });
+  return (
+    <div
+      onPointerMove={(e) => {
+        setPosition({
+          x: e.clientX,
+          y: e.clientY
+        });
+      }}
+      style={{
+        position: "relative",
+        width: '100vw',
+        height: "100vh",
+      }}
+    >
+      <div
+        style={{
+          position: "absolute",
+          backgroundColor: "red",
+          borderRadius: "50%",
+          transform: `translate(${position.x}px, ${position.y}px)`,
+          left: -10,
+          top: -10,
+          width: 20,
+          height: 20,
+        }}
+      />
+    </div>
+  );
 }
