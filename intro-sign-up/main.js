@@ -1,10 +1,12 @@
 const inputs = document.querySelectorAll("input:not([type='submit'])");
-
+const mySubmit = document.querySelector('.submit');
 inputs.forEach(input => {
     input.addEventListener('invalid', addErrorMessage);
 
     input.addEventListener('blur', (event) => {
-        input.checkValidity();
+        if (input.checkValidity()) {
+            mySubmit.disabled = false;
+        };
     })
 
     input.addEventListener('focus', removeErrorMessage);

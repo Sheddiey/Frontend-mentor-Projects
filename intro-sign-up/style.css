@@ -214,7 +214,7 @@ body {
   display: grid;
 }
 .cont > * {
-  padding: var(--size-300);
+  padding: var(--size-200);
 }
 
 input[type=submit] {
@@ -248,7 +248,7 @@ input[type=submit]:hover {
   padding: 0;
   text-align: right;
   font-weight: var(--fw-medium);
-  color: red;
+  color: rgb(195, 25, 25);
   font-size: 0.65em;
   font-style: italic;
   margin-block-start: 10px;
@@ -290,7 +290,7 @@ input.error{
   font-size: 1rem;
 }
 .fs-200 {
-  font-size: 1.7rem;
+  font-size: 2.4rem;
 }
 .fs-300 {
   font-size: var(--size-300);
