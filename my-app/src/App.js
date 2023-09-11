@@ -1,5 +1,5 @@
-import Menu from "./Managing state/Changing-State/Menu";
+import TravelPlan from "./Managing state/Changing-State/PlaceTree";
 
 export default function App() {
-  return <Menu />;
+  return <TravelPlan />;
 }
