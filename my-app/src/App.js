@@ -1,6 +1,5 @@
-import FeedbackForm from "./Managing state/Changing-State/FeedbackForm";
-
+import Form from "./Managing state/Changing-State/Form";
 
 export default function App() {
-  return <FeedbackForm />;
+  return <Form />;
 }
