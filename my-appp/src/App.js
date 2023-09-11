@@ -1,63 +1,48 @@
-import { useImmer } from "use-immer";
+import { useState } from "react";
 
-let nextId = 3;
-
-const initialList = [
-  { id: 0, title: "Big Bellies", seen: false },
-  { id: 1, title: "Lunar Lanscape", seen: false },
-  { id: 2, title: "Terracotta Army", seen: true },
+const initialProducts = [
+  {
+    id: 0,
+    name: "Baklava",
+    count: 1,
+  },
+  {
+    id: 1,
+    name: "Cheese",
+    count: 5,
+  },
+  {
+    id: 2,
+    name: "Spaghetti",
+    count: 2,
+  },
 ];
 
-export default function BucketList() {
-  const [myList, updateMyList] = useImmer(initialList);
-  const [yourList, updateYourList] = useImmer(initialList);
+export default function ShoppingCart() {
+  const [products, setProducts] = useState(initialProducts);
 
-  function handleToggleMyList(id, nextSeen) {
-    updateMyList(draft => {
-      const artwork = draft.find( a => a.id === id);
-      artwork.seen = nextSeen;
-    });
+  function handleIncreaseClick(productId) {
+    setProducts(products.map(product => {
+      if (product.id === productId){
+        return {...product, count: ++ product.count}
+      } else {
+        return product;
+      }
+    }))
   }
 
-  function handleToggleYourList(id, nextSeen) {
-    updateYourList(draft => {
-      const artwork = draft.find(a => a.id ===id);
-      artwork.seen = nextSeen;
-    })
-  }
-
-  return (
-    <>
-      <h1>Art Bucket List</h1>
-      <h2>My list of art to see:</h2>
-      <ItemList
-        artworks={myList}
-        onToggle={handleToggleMyList}
-      />
-      <h2>Your list of art to see:</h2>
-      <ItemList
-        artworks={yourList}
-        onToggle={handleToggleYourList}
-      />
-    </>
-  );
-}
-
-function ItemList({ artworks, onToggle }) {
   return (
     <ul>
-      {artworks.map((artwork) => (
-        <li key={artwork.id}>
-          <label>
-            <input
-              type="checkbox"
-              checked={artwork.seen}
-              onChange={(e) => {
-                onToggle(artwork.id, e.target.checked);
-              }}
-            />
-            {artwork.title}
-          </label>
+      {products.map((product) => (
+        <li key={product.id}>
+          {product.name} (<b>{product.count}</b>)
+          <button
+            onClick={() => {
+              handleIncreaseClick(product.id);
+            }}
+          >
+            +
+          </button>
         </li>
       ))}
     </ul>
