@@ -1,5 +1,5 @@
-import Picture from "./Managing state/Challenge1";
+import MovingDot from "./Managing state/Changing-State/MovingDot";
 
 export default function App() {
-  return <Picture />;
+  return <MovingDot />;
 }
