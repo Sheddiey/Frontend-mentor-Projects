@@ -1,75 +1,45 @@
 import { useState } from "react";
+import AddToDo from "./AddTodo";
+import TaskList from "./TaskList";
 
-const initialProducts = [
-  {
-    id: 0,
-    name: "Baklava",
-    count: 1,
-  },
-  {
-    id: 1,
-    name: "Cheese",
-    count: 5,
-  },
-  {
-    id: 2,
-    name: "Spaghetti",
-    count: 2,
-  },
+let nextId = 3;
+const initialTodos = [
+  { id: 0, title: "Buy milk", done: true },
+  { id: 1, title: "Eat Tacos", done: false },
+  { id: 2, title: "Brew tea", done: false },
 ];
 
-export default function ShoppingCart() {
-  const [products, setProducts] = useState(initialProducts);
+export default function TaskApp() {
+  const [todos, setTodos] = useState(initialTodos);
 
-  function handleIncreaseClick(productId) {
-    setProducts(
-      products.map((product) => {
-        if (product.id === productId) {
-          return {
-            ...product,
-            count: product.count + 1,
-          };
+  function handleAddTodo(title) {
+    setTodos([...todos, { id: nextId++, title: title, done: false }]);
+  }
+
+  function handleChangeTodo(nextToDo) {
+    // const nextTodos = todos.find(t => t.id === nextToDo.id)
+    setTodos(
+      todos.map((t) => {
+        if (t.id === nextToDo.id) {
+          return nextToDo;
         } else {
-          return product;
+          return t;
         }
       })
     );
   }
 
-  function handleDecreaseClick(productId) {
-   let nextProducts = products.map(product => {
-      if (product.id === productId) {
-        return {
-          ...product,
-          count: product.count -1
-        }
-      }  else {
-        return product;
-      }
-    })
-    nextProducts = nextProducts.filter(p => p.count > 0);
-    setProducts(nextProducts)
+  function handleDeleteToDo(toDoId) {
+    setTodos(todos.filter((t) => t.id !== toDoId));
   }
-
   return (
-    <ul>
-      {products.map((product) => (
-        <li key={product.id}>
-          {product.name} (<b>{product.count}</b>)
-          <button
-            onClick={() => {
-              handleIncreaseClick(product.id);
-            }}
-          >
-            +
-          </button>
-          <button
-            onClick={() => {
-              handleDecreaseClick(product.id)
-            }}
-          >–</button>
-        </li>
-      ))}
-    </ul>
+    <>
+      <AddToDo onAddToDo={handleAddTodo} />
+      <TaskList
+        todos={todos}
+        onChangeToDo={handleChangeTodo}
+        onDeleteToDo={handleDeleteToDo}
+      />
+    </>
   );
 }
