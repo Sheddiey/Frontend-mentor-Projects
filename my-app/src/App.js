@@ -1,5 +1,5 @@
-import TravelPlan from "./Managing state/Changing-State/PlaceTree";
+import Accordion from "./Managing state/Sharing-state/Panel";
 
 export default function App() {
-  return <TravelPlan />;
+  return <Accordion />
 }
