@@ -1,7 +1,5 @@
-import Form from "./Managing state/Form";
+import Picture from "./Managing state/Challenge1";
 
 export default function App() {
-  return (
-    <Form />
-  );
+  return <Picture />;
 }
