@@ -1,33 +1,35 @@
 import { useState } from "react";
 import { initialTravelPlan } from "./Place";
 
-function PlaceTree({ place }) {
-    const childPlaces = place.childPlaces;
-    return (
-        <li>
-            {place.title}
-            {childPlaces.length > 0 && (
-                <ol>
-                    {childPlaces.map(place => (
-                        <PlaceTree key={place.id} place={place} />
-                    ))}
-                </ol>
-            )}
-        </li>
-    );
+function PlaceTree({ id, placesById }) {
+  const place = placesById[id];
+  const childIds = place.childIds;
+  return (
+    <li>
+      {place.title}
+      {childIds.length > 0 && (
+        <ol>
+          {childIds.map((childId) => (
+            <PlaceTree key={childId} id={childId} placesById={placesById} />
+          ))}
+        </ol>
+      )}
+    </li>
+  );
 }
 
 export default function TravelPlan() {
-    const [plan, setPlan] = useState(initialTravelPlan);
-    const planets = plan.childPlaces;
-    return (
-        <>
-            <h2>Places to visit</h2>
-            <ol>
-                {planets.map(place => (
-                    <PlaceTree key={place.id} place={place} />
-                ))}
-            </ol>
-        </>
-    );
+  const [plan, setPlan] = useState(initialTravelPlan);
+  const root = plan[0];
+  const planetIds = root.childIds;
+  return (
+    <>
+      <h2>Places to visit</h2>
+      <ol>
+        {planetIds.map((id) => (
+          <PlaceTree key={id} id={id} placesById={plan} />
+        ))}
+      </ol>
+    </>
+  );
 }
