@@ -61,6 +61,11 @@ label {
   float: left;
 }
 
+.fancy {
+  border: 5px solid gold;
+  color: #ff6767;
+}
+
 .hover {
   background: #ffffd8;
 }
