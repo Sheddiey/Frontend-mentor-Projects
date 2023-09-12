@@ -1,5 +1,5 @@
-import FilterableList from "./Managing state/Sharing-state/Challenge2";
+import CounterApp from "./Managing state/Preserving-Resetting-State/Counter";
 
 export default function App() {
-  return <FilterableList/>
+  return <CounterApp />
 }
