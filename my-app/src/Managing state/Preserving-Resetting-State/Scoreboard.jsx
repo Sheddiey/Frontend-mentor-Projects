@@ -4,11 +4,11 @@ export default function Scoreboard() {
     const [isPlayerA, setIsPlayerA] = useState(true);
     return (
         <div>
-            {isPlayerA && 
-                <Counter person="Taylor" />
-             }
-             {!isPlayerA && 
-                <Counter person="Sarah" />}
+            {isPlayerA ? (
+                <Counter key="Taylor" person="Taylor" />
+            ) : (
+                <Counter key="Sarah" person="Sarah" />
+            )}
             <button onClick={() => {
                 setIsPlayerA(!isPlayerA);
             }}>
@@ -35,7 +35,7 @@ function Counter({ person }) {
         >
             <h1>{person}s Score: {score}</h1>
             <button onClick={() => setScore(score + 1)}>
-                Add one
+                Add 
             </button>
         </div>
     );
