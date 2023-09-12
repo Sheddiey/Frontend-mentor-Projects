@@ -4,11 +4,11 @@ export default function Scoreboard() {
     const [isPlayerA, setIsPlayerA] = useState(true);
     return (
         <div>
-            {isPlayerA ? (
+            {isPlayerA && 
                 <Counter person="Taylor" />
-            ) : (
-                <Counter person="Sarah" />
-            )}
+             }
+             {!isPlayerA && 
+                <Counter person="Sarah" />}
             <button onClick={() => {
                 setIsPlayerA(!isPlayerA);
             }}>
