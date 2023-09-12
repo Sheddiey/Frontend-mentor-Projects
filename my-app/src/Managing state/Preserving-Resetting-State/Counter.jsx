@@ -1,12 +1,22 @@
 import { useState } from "react";
 
 export default function CounterApp() {
-    const counter = <Counter />
+    const [showB, setShowB] = useState(true);
     return (
         <div>
-            {counter}
-            {counter}
-            {counter}
+            <Counter />
+            <Counter />
+            {showB && <Counter />}
+            <label>
+                <input
+                    type="checkbox"
+                    checked={showB}
+                    onChange={(e) => {
+                        setShowB(e.target.checked)
+                    }}
+                />
+                Render the Third counter.
+            </label>
         </div>
     );
 }
