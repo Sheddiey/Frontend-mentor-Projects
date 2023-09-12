@@ -1,5 +1,5 @@
-import CounterApp from "./Managing state/Preserving-Resetting-State/Counter";
+import Scoreboard from "./Managing state/Preserving-Resetting-State/Scoreboard";
 
 export default function App() {
-  return <CounterApp />
+  return <Scoreboard />
 }
