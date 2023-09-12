@@ -1,5 +1,5 @@
-import Accordion from "./Managing state/Sharing-state/Panel";
+import SyncedInputs from "./Managing state/Sharing-state/Challenge1";
 
 export default function App() {
-  return <Accordion />
+  return <SyncedInputs />
 }
