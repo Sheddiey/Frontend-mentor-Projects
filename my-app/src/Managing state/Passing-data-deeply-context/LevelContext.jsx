@@ -1,3 +1,3 @@
 import { createContext } from "react";
 
-export const levelContext = createContext(0);
+export const LevelContext = createContext(0);
