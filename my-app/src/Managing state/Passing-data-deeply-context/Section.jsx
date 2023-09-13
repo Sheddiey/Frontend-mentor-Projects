@@ -1,7 +1,11 @@
-export default function Section({ children }) {
-    return (
-        <section className="section">
-            {children}
-        </section>
-    );
+import { levelContext } from "./LevelContext";
+
+export default function Section({ level, children }) {
+  return (
+    <section className="section">
+      <levelContext.Provider value={level}>
+        {children}
+      </levelContext.Provider>
+    </section>
+  );
 }
