@@ -1,5 +1,5 @@
-import Page from "./Managing state/Passing-data-deeply-context/Page";
+import TaskApp from "./Managing state/Scaling-up--reducer_context/TaskApp";
 
 export default function App() {
-  return <Page />
+  return <TaskApp />
 }
