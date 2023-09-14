@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { flushSync } from "react-dom";
 
 export default function TodoList() {
   const listRef = useRef(null);
@@ -7,8 +8,11 @@ export default function TodoList() {
 
   function handleAdd() {
     const newTodo = { id: nextId++, text: text };
-    setText("");
-    setTodos([...todos, newTodo]);
+    flushSync(() => {
+      setText("");
+      setTodos([...todos, newTodo]);
+    });
+
     listRef.current.lastChild.scrollIntoView({
       behavior: "smooth",
       block: "nearest",
@@ -20,8 +24,8 @@ export default function TodoList() {
       <button onClick={handleAdd}>Add</button>
       <input value={text} onChange={(e) => setText(e.target.value)} />
       <ul ref={listRef}>
-        {todos.map(todo => (
-            <li key={todo.id}>{todo.text}</li>
+        {todos.map((todo) => (
+          <li key={todo.id}>{todo.text}</li>
         ))}
       </ul>
     </>
@@ -30,9 +34,9 @@ export default function TodoList() {
 
 let nextId = 0;
 let initialTodos = [];
-for (let i = 0; i < 40; i++){
-    initialTodos.push({
-        id: nextId++,
-        text: 'Todo #' + (i + 1)
-    });
+for (let i = 0; i < 40; i++) {
+  initialTodos.push({
+    id: nextId++,
+    text: "Todo #" + (i + 1),
+  });
 }
