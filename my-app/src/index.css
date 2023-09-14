@@ -46,13 +46,26 @@ ul {
   padding-inline-start: 20px;
 }
 
-.section {
-  padding: 10px;
-  margin: 5px;
-  border-radius: 5px;
-  border: 1px solid #aaa;
+div {
+  width: 100%;
+  overflow: hidden;
 }
 
-.fancy {
-  border: 4px dashed pink;
+nav {
+  text-align: center;
+}
+
+button {
+  margin: .25rem;
+}
+
+ul,
+li {
+  list-style: none;
+  white-space: nowrap;
+}
+
+li {
+  display: inline;
+  padding: 0.5rem;
 }
