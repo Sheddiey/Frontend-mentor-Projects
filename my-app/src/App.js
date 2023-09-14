@@ -1,5 +1,5 @@
-import TaskApp from "./Managing state/Scaling-up--reducer_context/TaskApp";
+import Counter from "./Escape Hatches/Referencing values with ref/Counter";
 
 export default function App() {
-  return <TaskApp />
+  return <Counter />
 }
