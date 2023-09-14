@@ -1,4 +1,5 @@
 import Counter from "./Escape Hatches/Referencing values with ref/Counter";
+import CounterButton from "./Escape Hatches/Referencing values with ref/CounterButton";
 import StopWatch from "./Escape Hatches/Referencing values with ref/StopWatch";
 
 export default function App() {
@@ -6,6 +7,7 @@ export default function App() {
     <>
       <Counter />
       <StopWatch />
+      <CounterButton />
     </>
   );
 }
