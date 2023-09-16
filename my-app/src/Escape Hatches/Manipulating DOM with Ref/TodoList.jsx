@@ -34,7 +34,7 @@ export default function TodoList() {
 
 let nextId = 0;
 let initialTodos = [];
-for (let i = 0; i < 40; i++) {
+for (let i = 0; i < 400000; i++) {
   initialTodos.push({
     id: nextId++,
     text: "Todo #" + (i + 1),
