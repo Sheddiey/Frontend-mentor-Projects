@@ -1,5 +1,5 @@
-import VideoPlayerApp from "./Escape Hatches/Synchronizing with Effects/VideoPlayer";
+import ChatRoom from "./Escape Hatches/Synchronizing with Effects/ChatApp";
 
 export default function App() {
-  return <VideoPlayerApp />;
+  return <ChatRoom />;
 }
