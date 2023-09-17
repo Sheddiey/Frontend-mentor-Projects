@@ -1,5 +1,5 @@
-import TodoList from "./Escape Hatches/Manipulating DOM with Ref/TodoList";
+import VideoPlayerApp from "./Escape Hatches/Synchronizing with Effects/VideoPlayer";
 
 export default function App() {
-  return <TodoList />;
+  return <VideoPlayerApp />;
 }
