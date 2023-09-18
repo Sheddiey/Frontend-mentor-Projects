@@ -1,5 +1,5 @@
-import ChatApp from "./Escape Hatches/Lifecycle of Reactive Effects/ChatApp";
+import ChatAppTwo from "./Escape Hatches/Separating Events from Effects/ChatApp";
 
 export default function App() {
-  return <ChatApp />;
+  return <ChatAppTwo />;
 }
