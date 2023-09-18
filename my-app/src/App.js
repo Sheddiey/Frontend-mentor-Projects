@@ -1,5 +1,5 @@
-import PlaygroundApp from "./Escape Hatches/Synchronizing with Effects/Playground";
+import ChatApp from "./Escape Hatches/Lifecycle of Reactive Effects/ChatApp";
 
 export default function App() {
-  return <PlaygroundApp />;
+  return <ChatApp />;
 }
