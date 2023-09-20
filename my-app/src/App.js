@@ -1,5 +1,5 @@
-import ChatRoomApp from "./Escape Hatches/Separating Events from Effects/ChatRoomApp";
+import ChatThreeApp from "./Escape Hatches/Separating Events from Effects/ChatThreeApp";
 
 export default function App() {
-  return <ChatRoomApp />;
+  return <ChatThreeApp />;
 }
