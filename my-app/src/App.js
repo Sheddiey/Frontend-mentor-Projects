@@ -1,5 +1,5 @@
-import Form from "./Escape Hatches/Re-Using logic with custom hooks/Form";
+import FormTwo from "./Escape Hatches/Re-Using logic with custom hooks/FormTwo";
 
 export default function App() {
-  return <Form />;
+  return <FormTwo />;
 }
