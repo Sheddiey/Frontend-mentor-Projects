@@ -1,5 +1,5 @@
-import StatusBar from "./Escape Hatches/Re-Using logic with custom hooks/StatusBar";
+import SaveButton from "./Escape Hatches/Re-Using logic with custom hooks/SaveButton";
 
 export default function App() {
-  return <StatusBar />;
+  return <SaveButton />;
 }
