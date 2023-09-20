@@ -1,5 +1,5 @@
-import ChatThreeApp from "./Escape Hatches/Separating Events from Effects/ChatThreeApp";
+import StatusBar from "./Escape Hatches/Re-Using logic with custom hooks/StatusBar";
 
 export default function App() {
-  return <ChatThreeApp />;
+  return <StatusBar />;
 }
