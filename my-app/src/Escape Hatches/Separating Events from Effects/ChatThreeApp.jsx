@@ -7,10 +7,13 @@ function ChatRoom({ roomId }) {
   const [messages, setMessages] = useState("");
 
   useEffect(() => {
-    const options = {
-      serverUrl: serverUrl,
-      roomId: roomId,
-    };
+    function createOptions() {
+      return {
+        serverUrl: serverUrl,
+        roomId: roomId,
+      };
+    }
+    const options = createOptions();
     const connection = createConnection(options);
     connection.connect();
     return () => connection.disconnect();
