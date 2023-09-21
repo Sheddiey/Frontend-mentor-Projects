@@ -1,5 +1,5 @@
-import ButtonApp from "./Escape Hatches/Re-Using logic with custom hooks/ButtonApp";
+import AnimationApp from "./Escape Hatches/Re-Using logic with custom hooks/Animation";
 
 export default function App() {
-  return <ButtonApp />;
+  return <AnimationApp />;
 }
