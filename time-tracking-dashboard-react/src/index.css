@@ -119,8 +119,8 @@ body {
 
 /* Profile */
 .jeremy {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border: 2px solid white;
   border-radius: 50%;
 }
@@ -172,11 +172,17 @@ body {
 .flex-mobile p {
   color: var(--pale-blue);
 }
-.bg-icon {
-  position: static;
-  height: 40px;
-  justify-self: right;
+.bg-icon-container {
+position: relative;  
+height: 30px;
+overflow: hidden;
 }
+.bg-icon {
+  position: absolute;
+  height: 50px;
+  right: 8px;
+}
+
 
 @media (max-width: 47em) {
   body {
