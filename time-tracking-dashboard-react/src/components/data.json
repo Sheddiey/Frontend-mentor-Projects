@@ -1,6 +1,7 @@
 [
   {
     "title": "Work",
+    "src": "./images/icon-work.svg",
     "timeframes": {
       "daily": {
         "current": 5,

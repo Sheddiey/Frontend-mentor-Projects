@@ -1,17 +1,156 @@
-import ellipsis from './images/icon-ellipsis.svg'
+import ellipsis from "./images/icon-ellipsis.svg";
+import work from "./images/icon-work.svg";
+import play from "./images/icon-play.svg";
+import study from "./images/icon-play.svg";
+import exercise from "./images/icon-exercise.svg";
+import social from "./images/icon-social.svg";
+import selfCare from "./images/icon-self-care.svg";
 
-export function Card({ src, alt, previous, current, title }) {
+export function Card() {
+  const data = [
+    {
+      title: "Work",
+      src: work,
+      timeframes: {
+        daily: {
+          current: 5,
+          previous: 7,
+        },
+        weekly: {
+          current: 32,
+          previous: 36,
+        },
+        monthly: {
+          current: 103,
+          previous: 128,
+        },
+      },
+    },
+    {
+      title: "Play",
+      src: play,
+      timeframes: {
+        daily: {
+          current: 1,
+          previous: 2,
+        },
+        weekly: {
+          current: 10,
+          previous: 8,
+        },
+        monthly: {
+          current: 23,
+          previous: 29,
+        },
+      },
+    },
+    {
+      title: "Study",
+      src: study,
+      timeframes: {
+        daily: {
+          current: 0,
+          previous: 1,
+        },
+        weekly: {
+          current: 4,
+          previous: 7,
+        },
+        monthly: {
+          current: 13,
+          previous: 19,
+        },
+      },
+    },
+    {
+      title: "Exercise",
+      src: exercise,
+      timeframes: {
+        daily: {
+          current: 1,
+          previous: 1,
+        },
+        weekly: {
+          current: 4,
+          previous: 5,
+        },
+        monthly: {
+          current: 11,
+          previous: 18,
+        },
+      },
+    },
+    {
+      title: "Social",
+      src: social,
+      timeframes: {
+        daily: {
+          current: 1,
+          previous: 3,
+        },
+        weekly: {
+          current: 5,
+          previous: 10,
+        },
+        monthly: {
+          current: 21,
+          previous: 23,
+        },
+      },
+    },
+    {
+      title: "Self Care",
+      src: selfCare,
+      timeframes: {
+        daily: {
+          current: 0,
+          previous: 1,
+        },
+        weekly: {
+          current: 2,
+          previous: 2,
+        },
+        monthly: {
+          current: 7,
+          previous: 11,
+        },
+      },
+    },
+  ];
+
+  const backgroundColors = [
+    "hsl(15, 100%, 70%)",
+    "hsl(195, 74%, 62%)",
+    "hsl(348, 100%, 68%)",
+    "hsl(145, 58%, 55%)",
+    "hsl(264, 64%, 52%)",
+    "hsl(43, 84%, 65%)",
+  ];
+
   return (
-    <>
-      <div className="container">
-        <img src={src} alt={alt} />
-        <div className="flex-space-between">
-          <p>{title}</p>
-          <img src={ellipsis} alt="icon-ellipsis" />
-        </div>
-        <h1>{current}</h1>
-        <p>Last Week - {previous}</p>
-      </div>
-    </>
+    <div className="grid-container">
+      {data.map((data, index) => {
+        const backgroundColor = backgroundColors[index];
+        return (
+          <div
+            className="grid-item"
+            key={data.title}
+            style={{ backgroundColor: backgroundColor }}
+          >
+            <img className="bg-icon" src={data.src} alt={data.title} />
+            <div className="dark-blue">
+              <div className="flex-space-between">
+                <p>{data.title}</p>
+                <img src={ellipsis} alt="icon-ellipsis" />
+              </div>
+              <div className="flex-mobile">
+                <h1>{data.timeframes.weekly.current} hrs</h1>
+                <p>Last Week - {data.timeframes.weekly.previous} hrs</p>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
   );
 }

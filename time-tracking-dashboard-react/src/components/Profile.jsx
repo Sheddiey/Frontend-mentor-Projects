@@ -1,17 +1,19 @@
-import jeremy from './images/image-jeremy.png'
+import jeremy from "./images/image-jeremy.png";
 export function Profile() {
   return (
-    <>
-      <div>
-        <img src={jeremy} alt="Jeremy" />
-        <p>Report for</p>
-        <h1>Jeremy Robson</h1>
+    <div className="profile">
+      <div className="flex profile-top">
+        <img className="jeremy" src={jeremy} alt="Jeremy" />
+        <div>
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
       </div>
-      <div>
+      <div className="period">
         <p>Daily</p>
         <p>Weekly</p>
         <p>Monthly</p>
       </div>
-    </>
+    </div>
   );
 }
