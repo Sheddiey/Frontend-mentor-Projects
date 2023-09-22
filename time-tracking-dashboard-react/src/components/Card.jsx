@@ -5,6 +5,7 @@ import study from "./images/icon-play.svg";
 import exercise from "./images/icon-exercise.svg";
 import social from "./images/icon-social.svg";
 import selfCare from "./images/icon-self-care.svg";
+import { Profile } from "./Profile";
 
 export function Card() {
   const data = [
@@ -128,31 +129,34 @@ export function Card() {
   ];
 
   return (
-    <div className="grid-container">
-      {data.map((data, index) => {
-        const backgroundColor = backgroundColors[index];
-        return (
-          <div
-            className="grid-item"
-            key={data.title}
-            style={{ backgroundColor: backgroundColor }}
-          >
-            <div className="bg-icon-container">
-              <img className="bg-icon" src={data.src} alt={data.title} />
-            </div>
-            <div className="dark-blue">
-              <div className="flex-space-between">
-                <p>{data.title}</p>
-                <img src={ellipsis} alt="icon-ellipsis" />
+    <div className="flex-container">
+      <Profile />
+      <div className="grid-container">
+        {data.map((data, index) => {
+          const backgroundColor = backgroundColors[index];
+          return (
+            <div
+              className="grid-item"
+              key={data.title}
+              style={{ backgroundColor: backgroundColor }}
+            >
+              <div className="bg-icon-container">
+                <img className="bg-icon" src={data.src} alt={data.title} />
               </div>
-              <div className="flex-mobile">
-                <h1>{data.timeframes.weekly.current}hrs</h1>
-                <p>Last Week - {data.timeframes.weekly.previous}hrs</p>
+              <div className="dark-blue">
+                <div className="flex-space-between">
+                  <p>{data.title}</p>
+                  <img src={ellipsis} alt="icon-ellipsis" />
+                </div>
+                <div className="flex-mobile">
+                  <h1>{data.timeframes.weekly.current}hrs</h1>
+                  <p>Last Week - {data.timeframes.weekly.previous}hrs</p>
+                </div>
               </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }
