@@ -158,6 +158,9 @@ body {
   background-color: var(--dark-blue);
   color: white;
 }
+.period p {
+  cursor: pointer;
+}
 .flex-space-between img {
   width: 20px;
   height: 5px;

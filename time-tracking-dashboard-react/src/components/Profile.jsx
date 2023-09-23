@@ -1,5 +1,5 @@
 import jeremy from "./images/image-jeremy.png";
-export function Profile() {
+export function Profile({onClick}) {
   return (
     <div className="profile">
       <div className=" profile-top">
@@ -10,7 +10,7 @@ export function Profile() {
         </div>
       </div>
       <div className="period">
-        <p>Daily</p>
+        <p onClick={onClick}>Daily</p>
         <p>Weekly</p>
         <p>Monthly</p>
       </div>
