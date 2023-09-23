@@ -2,7 +2,7 @@ import jeremy from "./images/image-jeremy.png";
 export function Profile() {
   return (
     <div className="profile">
-      <div className="flex profile-top">
+      <div className=" profile-top">
         <img className="jeremy" src={jeremy} alt="Jeremy" />
         <div>
           <p>Report for</p>

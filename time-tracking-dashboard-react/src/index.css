@@ -106,16 +106,7 @@ body {
   display: grid;
   gap: 20px;
 }
-@media (min-width: 47em) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .flex-container {
-    display: flex;
-    gap: 20px;
-  }
- 
-}
+
 .grid-item {
   border-radius: 15px;
   overflow: hidden;
@@ -123,8 +114,13 @@ body {
 .dark-blue{
   background-color: var(--dark-blue);
   color: white;
-  padding: 10px;
+  padding: 30px;
   border-radius: 15px;
+  cursor: pointer;
+}
+.dark-blue:hover,
+.dark-blue:focus {
+  background-color: hsl(236, 41%, 34%);
 }
 
 /* Profile */
@@ -143,14 +139,15 @@ body {
   padding: 20px;
 }
 .profile-top {
+  display: flex;
    align-items: center;  
    gap: 10px;
    background-color: var(--blue);
-   width: 300px;
    border-radius: 15px;
 }
 .profile-top p {
   color: var(--pale-blue);
+  font-size: 12px;
 }
 .profile-top h1 {
   color: white;
@@ -173,9 +170,11 @@ body {
 .flex-mobile h1 {
   font-size: 30px;
   font-weight: var(--fw-light);
+  margin-block: 5px;
 }
 .flex-mobile p {
   color: var(--pale-blue);
+  font-size: 12px;
 }
 .bg-icon-container {
 position: relative;  
@@ -187,6 +186,7 @@ overflow: hidden;
   height: 50px;
   right: 8px;
 }
+
 
 
 @media (max-width: 47em) {
@@ -207,6 +207,38 @@ overflow: hidden;
   gap: 20px;
 }
 }
+
+@media (min-width: 47em) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .flex-container {
+    display: flex;
+    gap: 20px;
+  }
+ .profile-top {
+  display: grid;
+ }
+ .profile-top h1 {
+  max-width: 8ch;
+  margin-block-end: 20px;
+  font-size: 30px;
+ }
+ .profile-top p {
+  margin-block-start: 20px;
+ }
+ .period {
+  display: grid;
+  gap: 10px;
+ }
+ .period p{
+  font-size: 12px;
+ }
+ .grid-item {
+  width: 200px;
+}
+}
+
 
 
 /* mobile */
