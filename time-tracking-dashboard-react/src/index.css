@@ -195,8 +195,6 @@ overflow: hidden;
   right: 8px;
 }
 
-
-
 @media (max-width: 47em) {
   body {
     margin-block: 40px;
@@ -205,6 +203,11 @@ overflow: hidden;
   display: flex;
   justify-content: space-between;
   gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.profile {
+  margin-block: 20px;
 }
 .period {
   display: flex;
@@ -223,6 +226,7 @@ overflow: hidden;
     display: flex;
     gap: 20px;
   }
+  
  .profile-top {
   display: grid;
  }
