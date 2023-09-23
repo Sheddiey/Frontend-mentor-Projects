@@ -7,6 +7,7 @@ export default function DashBoard() {
 
   function handleDailyClick() {
     setPeriod("daily");
+
   }
   function handleWeeklyClick() {
     setPeriod("weekly");
@@ -22,6 +23,7 @@ export default function DashBoard() {
           onClickDaily={handleDailyClick}
           onClickWeekly={handleWeeklyClick}
           onClickMonthly={handleMonthlyClick}
+          period={period}
         />
         <Card period={period} />
       </div>

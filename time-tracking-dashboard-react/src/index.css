@@ -156,10 +156,15 @@ body {
 }
 .period {
   background-color: var(--dark-blue);
-  color: white;
+  color: var(--desaturated-blue);
+  width: max-content;
 }
 .period p {
   cursor: pointer;
+}
+.period p:hover,
+.period p:focus{
+  color: white;
 }
 .flex-space-between img {
   width: 20px;
@@ -205,7 +210,6 @@ overflow: hidden;
   display: flex;
   justify-content: space-between;
   background-color: var(--dark-blue);
-  color: white;
   width: 300px;
   gap: 20px;
 }
@@ -235,7 +239,7 @@ overflow: hidden;
   gap: 10px;
  }
  .period p{
-  font-size: 12px;
+  font-size: 13px;
  }
  .grid-item {
   width: 200px;
