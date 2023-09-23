@@ -3,13 +3,6 @@ import { data } from "./data";
 import { backgroundColors } from "./data";
 
 export function Card({ period }) {
-  const daily = period === "daily";
-  const weekly = period === "weekly";
-  const monthly = period === "monthly";
-
-
-  
-
   return (
     <div className="grid-container">
       {data.map((data, index) => {
@@ -28,10 +21,22 @@ export function Card({ period }) {
                 <p>{data.title}</p>
                 <img src={ellipsis} alt="icon-ellipsis" />
               </div>
-              <div className="flex-mobile">
-                <h1>{data.timeframes.weekly.current}hrs</h1>
-                <p>Last Week - {data.timeframes.weekly.previous}hrs</p>
-              </div>
+              {period === "daily" ? (
+                <div className="flex-mobile">
+                  <h1>{data.timeframes.daily.current}hrs</h1>
+                  <p>Yesterday - {data.timeframes.daily.previous}hrs</p>
+                </div>
+              ) : period === "weekly" ? (
+                <div className="flex-mobile">
+                  <h1>{data.timeframes.weekly.current}hrs</h1>
+                  <p>Last week - {data.timeframes.weekly.previous}hrs</p>
+                </div>
+              ) : (
+                <div className="flex-mobile">
+                  <h1>{data.timeframes.monthly.current}hrs</h1>
+                  <p>Last month - {data.timeframes.monthly.previous}hrs</p>
+                </div>
+              )}
             </div>
           </div>
         );

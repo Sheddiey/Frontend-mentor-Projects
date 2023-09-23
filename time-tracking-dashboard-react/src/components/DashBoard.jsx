@@ -3,16 +3,26 @@ import React, { useState } from "react";
 import { Profile } from "./Profile";
 
 export default function DashBoard() {
-  const [period, setPeriod] = useState('weekly');
+  const [period, setPeriod] = useState("weekly");
 
-  function handleDailyClick(e) {
-    setPeriod('daily');
+  function handleDailyClick() {
+    setPeriod("daily");
+  }
+  function handleWeeklyClick() {
+    setPeriod("weekly");
+  }
+  function handleMonthlyClick() {
+    setPeriod("monthly");
   }
 
   return (
     <>
       <div className="flex-container">
-        <Profile onClick={handleDailyClick}/>
+        <Profile
+          onClickDaily={handleDailyClick}
+          onClickWeekly={handleWeeklyClick}
+          onClickMonthly={handleMonthlyClick}
+        />
         <Card period={period} />
       </div>
     </>
